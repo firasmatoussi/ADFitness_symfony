@@ -1,0 +1,52 @@
+{% extends '@FrontOffice/AD-fitness/Cours.html.twig' %}
+
+{% block content %}
+    <h1>Cour</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cour.id }}</td>
+            </tr>
+            <tr>
+                <th>Lib</th>
+                <td>{{ cour.lib }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ cour.type }}</td>
+            </tr>
+            <tr>
+                <th>Salle</th>
+                <td>{{ cour.salle }}</td>
+            </tr>
+            <tr>
+                <th>Coachname</th>
+                <td>{{ cour.coachName }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if cour.date %}{{ cour.date|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Nbplace</th>
+                <td>{{ cour.nbPlace }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cours_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('cours_edit', { 'id': cour.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

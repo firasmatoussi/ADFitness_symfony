@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Sponsors list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Domaine</th>
+                <th>Contact</th>
+                <th>Datepacte</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sponsor in sponsors %}
+            <tr>
+                <td><a href="{{ path('sponsor_show', { 'id': sponsor.id }) }}">{{ sponsor.id }}</a></td>
+                <td>{{ sponsor.nom }}</td>
+                <td>{{ sponsor.domaine }}</td>
+                <td>{{ sponsor.contact }}</td>
+                <td>{% if sponsor.datepacte %}{{ sponsor.datepacte|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('sponsor_show', { 'id': sponsor.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

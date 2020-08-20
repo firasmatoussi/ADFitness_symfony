@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="card-header">
+        <strong class="card-title">Modification de l'equipement</strong>
+    </div>
+    {% set flashbag_notices = app.session.flashbag.get('notice') %}
+    {%  if flashbag_notices is not empty  %}
+
+        {%  for notice in flashbag_notices %}
+            <div class="col-sm-12">
+                <div class="alert  alert-danger alert-dismissible fade show" role="alert" >
+                    <div style="text-align: center">{{ notice }}</div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+
+    {% endif %}
+    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+        {{ form_start(edit_form) }}
+
+
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.reference)}}</td>
+            <td>
+                {{ form_widget(edit_form.reference) }}
+            </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.libelle)}}</td>
+            <td>
+                {{ form_widget(edit_form.libelle) }}
+            </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.domaine)}}</td>
+            <td>
+                {{ form_widget(edit_form.domaine) }}
+            </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.salle)}}</td>
+            <td>
+                {{ form_widget(edit_form.salle) }}
+            </td>
+        </tr>
+
+        <tr>
+        <td>{{ form_label(edit_form.etat)}}</td>
+        <td>
+            {{ form_widget(edit_form.etat) }}
+        </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(edit_form.fournisseur)}}</td>
+            <td>
+        {{ form_widget(edit_form.fournisseur) }}
+            </td>
+        </tr>
+        <tr>
+            <td><div style="display:none">
+                    {{ form_label(edit_form.date) }}
+                </div>
+            </td>
+            <td>
+                <div style="display:none">
+                    {{ form_row(edit_form.date) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>
+<input class="btn btn-warning" type="submit" value="Valider">
+
+</td>
+</tr>
+{{ form_end(edit_form) }}
+</table>
+<a class="btn btn-primary" href="{{ path('equipements_index') }}">Retourner a la iste des equipements</a>
+{% endblock %}

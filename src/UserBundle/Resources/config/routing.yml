@@ -1,0 +1,7 @@
+user_user:
+    resource: "@UserBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+user_homepage:
+    path:     /qsdf
+    defaults: { _controller: UserBundle:Default:index }

@@ -1,0 +1,505 @@
+back_office_homepage:
+    path:     /Admin
+    defaults: { _controller: BackOfficeBundle:Default:index }
+
+
+
+AfficherEquipement:
+    path:     /AfficherEquipement
+    defaults: { _controller: BackOfficeBundle:Equipement:AfficherEquipement}
+carttable_index:
+    path:     /Cart
+    defaults: { _controller: "BackOfficeBundle:CartTable:index" }
+    methods:  GET
+
+carttable_show:
+    path:     /{id}/showCart
+    defaults: { _controller: "BackOfficeBundle:CartTable:show" }
+    methods:  GET
+
+carttable_new:
+    path:     /newCart
+    defaults: { _controller: "BackOfficeBundle:CartTable:new" }
+    methods:  [GET, POST]
+
+carttable_edit:
+    path:     /{id}/editCart
+    defaults: { _controller: "BackOfficeBundle:CartTable:edit" }
+    methods:  [GET, POST]
+
+carttable_delete:
+    path:     /{id}/deleteCart
+    defaults: { _controller: "BackOfficeBundle:CartTable:delete" }
+    methods:  DELETE
+
+equipements_index:
+  path:     /equip
+  defaults: { _controller: "BackOfficeBundle:Equipements:index" }
+  methods:  GET
+
+equipements_show:
+  path:     /{id}/showequip
+  defaults: { _controller: "BackOfficeBundle:Equipements:show" }
+  methods:  GET
+
+equipements_new:
+  path:     /newequip
+  defaults: { _controller: "BackOfficeBundle:Equipements:new" }
+  methods:  [GET, POST]
+
+equipements_edit:
+  path:     /{id}/editequip
+  defaults: { _controller: "BackOfficeBundle:Equipements:edit" }
+  methods:  [GET, POST]
+
+equipements_delete:
+  path:     /{id}/deleteequip
+  defaults: { _controller: "BackOfficeBundle:Equipements:delete" }
+  methods:  DELETE
+equipement_filtre:
+    path:     /equipementFiltre
+    defaults: { _controller: "BackOfficeBundle:Equipements:findEquipement" }
+    methods:  GET
+equipement_show_fournisseur:
+    path:     /equipementShowFournisseur
+    defaults: { _controller: "BackOfficeBundle:Fournisseurs:findFournisseur" }
+    methods:  GET
+equipement_filtre_salle:
+    path:     /equipementFiltreSalle
+    defaults: { _controller: "BackOfficeBundle:Equipements:findSalle" }
+    methods:  POST
+equipement_filtre_domaine:
+    path:     /equipementFiltreDomaine
+    defaults: { _controller: "BackOfficeBundle:Equipements:findDomaine" }
+    methods:  POST
+equipement_f:
+    path:     /equipementF
+    defaults: { _controller: "BackOfficeBundle:Equipements:findEquipementF" }
+
+equipement_nf:
+    path:     /equipementNf
+    defaults: { _controller: "BackOfficeBundle:Equipements:findEquipementNf" }
+
+equipement_m:
+    path:     /equipementM
+    defaults: { _controller: "BackOfficeBundle:Equipements:findEquipementM" }
+
+fournisseurs_index:
+      path:     /fournisseurs
+      defaults: { _controller: "BackOfficeBundle:Fournisseurs:index" }
+      methods:  GET
+
+fournisseurs_show:
+      path:     /{id}/show
+      defaults: { _controller: "BackOfficeBundle:Fournisseurs:show" }
+      methods:  GET
+
+fournisseurs_new:
+      path:     /newfournisseur
+      defaults: { _controller: "BackOfficeBundle:Fournisseurs:new" }
+      methods:  [GET, POST]
+
+fournisseurs_edit:
+      path:     /{id}/editfournisseur
+      defaults: { _controller: "BackOfficeBundle:Fournisseurs:edit" }
+      methods:  [GET, POST]
+
+fournisseurs_delete:
+      path:     /{id}/deletefournisseur
+      defaults: { _controller: "BackOfficeBundle:Fournisseurs:delete" }
+      methods:  DELETE
+stat:
+   path:     /stat
+   defaults: { _controller: "BackOfficeBundle:Stat:chart"}
+
+
+
+feedback_index:
+  path:     /Feedback
+  defaults: { _controller: "BackOfficeBundle:Feedback:index" }
+  methods:  GET
+
+feedback_show:
+  path:     /{ratingId}/showFeedback
+  defaults: { _controller: "BackOfficeBundle:Feedback:show" }
+  methods:  GET
+
+feedback_new:
+  path:     /newFeedback
+  defaults: { _controller: "BackOfficeBundle:Feedback:new" }
+  methods:  [GET, POST]
+
+feedback_edit:
+  path:     /{ratingId}/editFeedback
+  defaults: { _controller: "BackOfficeBundle:Feedback:edit" }
+  methods:  [GET, POST]
+
+feedback_delete:
+  path:     /{ratingId}/deleteFeedback
+  defaults: { _controller: "BackOfficeBundle:Feedback:delete" }
+  methods:  DELETE
+fiche_index:
+  path:     /Fiche
+  defaults: { _controller: "BackOfficeBundle:Fiche:index" }
+  methods:  GET
+
+fiche_show:
+  path:     /{id}/showFiche
+  defaults: { _controller: "BackOfficeBundle:Fiche:show" }
+  methods:  GET
+
+fiche_new:
+  path:     /newFiche
+  defaults: { _controller: "BackOfficeBundle:Fiche:new" }
+  methods:  [GET, POST]
+
+fiche_edit:
+  path:     /{id}/editFiche
+  defaults: { _controller: "BackOfficeBundle:Fiche:edit" }
+  methods:  [GET, POST]
+
+fiche_delete:
+  path:     /{id}/deleteFiche
+  defaults: { _controller: "BackOfficeBundle:Fiche:delete" }
+  methods:  DELETE
+product_index:
+  path:     /Product
+  defaults: { _controller: "BackOfficeBundle:Product:index" }
+  methods:  GET
+
+product_show:
+  path:     /{id}/showProduct
+  defaults: { _controller: "BackOfficeBundle:Product:show" }
+  methods:  GET
+
+product_new:
+  path:     /newProduct
+  defaults: { _controller: "BackOfficeBundle:Product:new" }
+  methods:  [GET, POST]
+
+product_edit:
+  path:     /{id}/editProduct
+  defaults: { _controller: "BackOfficeBundle:Product:edit" }
+  methods:  [GET, POST]
+
+product_delete:
+  path:     /{id}/deleteProduct
+  defaults: { _controller: "BackOfficeBundle:Product:delete" }
+  methods:  DELETE
+productmagasin_index:
+  path:     /PMagasin
+  defaults: { _controller: "BackOfficeBundle:ProductMagasin:index" }
+  methods:  GET
+
+productmagasin_show:
+  path:     /{id}/showPMagasin
+  defaults: { _controller: "BackOfficeBundle:ProductMagasin:show" }
+  methods:  GET
+
+productmagasin_new:
+  path:     /newPMagasin
+  defaults: { _controller: "BackOfficeBundle:ProductMagasin:new" }
+  methods:  [GET, POST]
+
+productmagasin_edit:
+  path:     /{id}/editPMagasin
+  defaults: { _controller: "BackOfficeBundle:ProductMagasin:edit" }
+  methods:  [GET, POST]
+
+productmagasin_delete:
+  path:     /{id}/deletePMagasin
+  defaults: { _controller: "BackOfficeBundle:ProductMagasin:delete" }
+  methods:  DELETE
+rechistorique_index:
+  path:     /recHisto
+  defaults: { _controller: "BackOfficeBundle:RecHistorique:index" }
+  methods:  GET
+
+rechistorique_show:
+  path:     /{id}/showrecHisto
+  defaults: { _controller: "BackOfficeBundle:RecHistorique:show" }
+  methods:  GET
+
+rechistorique_new:
+  path:     /newrecHisto
+  defaults: { _controller: "BackOfficeBundle:RecHistorique:new" }
+  methods:  [GET, POST]
+
+rechistorique_edit:
+  path:     /{id}/editrecHisto
+  defaults: { _controller: "BackOfficeBundle:RecHistorique:edit" }
+  methods:  [GET, POST]
+
+rechistorique_delete:
+  path:     /{id}/deleterecHisto
+  defaults: { _controller: "BackOfficeBundle:RecHistorique:delete" }
+  methods:  DELETE
+reclamation_index:
+  path:     /Reclamation
+  defaults: { _controller: "BackOfficeBundle:Reclamation:index" }
+  methods:  GET
+
+reclamation_show:
+  path:     /{id}/showReclamation
+  defaults: { _controller: "BackOfficeBundle:Reclamation:show" }
+  methods:  GET
+
+reclamation_new:
+  path:     /newReclamation
+  defaults: { _controller: "BackOfficeBundle:Reclamation:new" }
+  methods:  [GET, POST]
+
+reclamation_edit:
+  path:     /{id}/editReclamation
+  defaults: { _controller: "BackOfficeBundle:Reclamation:edit" }
+  methods:  [GET, POST]
+
+reclamation_delete:
+  path:     /{id}/deleteReclamation
+  defaults: { _controller: "BackOfficeBundle:Reclamation:delete" }
+  methods:  DELETE
+
+users_index:
+  path:     /users
+  defaults: { _controller: "BackOfficeBundle:Users:index" }
+  methods:  GET
+
+users_show:
+  path:     /{id}/showusers
+  defaults: { _controller: "BackOfficeBundle:Users:show" }
+  methods:  GET
+
+users_new:
+  path:     /newusers
+  defaults: { _controller: "BackOfficeBundle:Users:new" }
+  methods:  [GET, POST]
+
+users_edit:
+  path:     /{id}/editusers
+  defaults: { _controller: "BackOfficeBundle:Users:edit" }
+  methods:  [GET, POST]
+
+users_delete:
+  path:     /{id}/deleteusers
+  defaults: { _controller: "BackOfficeBundle:Users:delete" }
+  methods:  DELETE
+
+reservation_index_admin:
+  path:     /Reservation_index
+  defaults: { _controller: "BackOfficeBundle:Reservation:index" }
+
+reserv_index_admin:
+  path:     /Cours_index_reserv
+  defaults: { _controller: "BackOfficeBundle:Reservation:afficher" }
+
+all_reserv_index_admin:
+  path:     /Reserv_index
+  defaults: { _controller: "BackOfficeBundle:Reservation:afficheReserv" }
+
+
+reservation_show_admin:
+  path:     /{id}/showReservation
+  defaults: { _controller: "BackOfficeBundle:Reservation:show" }
+  methods:  GET
+
+reservation_new_admin:
+  path:     /newReservation
+  defaults: { _controller: "BackOfficeBundle:Reservation:new" }
+  methods:  [GET, POST]
+
+
+reservation_edit_admin:
+  path:     /{id}/editReservation
+  defaults: { _controller: "BackOfficeBundle:Reservation:edit" }
+  methods:  [GET, POST]
+
+reservation_delete_admin:
+  path:     /{id}/deleteReservation
+  defaults: { _controller: "BackOfficeBundle:Reservation:delete" }
+  methods:  DELETE
+
+
+cours_index_admin:
+  path:     /cours_index_admin
+  defaults: { _controller: "BackOfficeBundle:Cours:index" }
+  methods:  GET
+
+cours_filtre:
+  path:     /coursfiltre
+  defaults: { _controller: "BackOfficeBundle:Cours:findType" }
+
+coach_filtre:
+  path:     /coachfiltre
+  defaults: { _controller: "BackOfficeBundle:Cours:findCoach" }
+
+cours_show_admin:
+  path:     /{id}/show_admin
+  defaults: { _controller: "BackOfficeBundle:Cours:show" }
+  methods:  GET
+
+cours_new_admin:
+  path:     /new_admin
+  defaults: { _controller: "BackOfficeBundle:Cours:new" }
+  methods:  [GET, POST]
+
+cours_edit_admin:
+  path:     /{id}/edit_admin
+  defaults: { _controller: "BackOfficeBundle:Cours:edit" }
+  methods:  [GET, POST]
+
+cours_delete_admin:
+  path:     /{id}/delete_admin
+  defaults: { _controller: "BackOfficeBundle:Cours:delete" }
+  methods:  DELETE
+
+
+
+assurance_index:
+  path:     /ass
+  defaults: { _controller: "BackOfficeBundle:assurance:index" }
+  methods:  GET
+
+assurance_show:
+  path:     /assurance/{id}/show
+  defaults: { _controller: "BackOfficeBundle:assurance:show" }
+  methods:  GET
+
+assurance_new:
+  path:     /assurance/new
+  defaults: { _controller: "BackOfficeBundle:assurance:new" }
+  methods:  [GET, POST]
+
+assurance_edit:
+  path:     /assurance/{id}/edit
+  defaults: { _controller: "BackOfficeBundle:assurance:edit" }
+  methods:  [GET, POST]
+
+assurance_delete:
+  path:     /assurance/{id}/delete
+  defaults: { _controller: "BackOfficeBundle:assurance:delete" }
+  methods:  DELETE
+
+
+sponsor_index:
+  path:     /sponsor
+  defaults: { _controller: "BackOfficeBundle:sponsor:index" }
+  methods:  GET
+
+sponsor_show:
+  path:     /{id}/showsponsor
+  defaults: { _controller: "BackOfficeBundle:sponsor:show" }
+  methods:  GET
+
+sponsor_new:
+  path:     /newsponsor
+  defaults: { _controller: "BackOfficeBundle:sponsor:new" }
+  methods:  [GET, POST]
+
+sponsor_edit:
+  path:     /{id}/editsponsor
+  defaults: { _controller: "BackOfficeBundle:sponsor:edit" }
+  methods:  [GET, POST]
+
+sponsor_delete:
+  path:     /{id}/deletesponsor
+  defaults: { _controller: "BackOfficeBundle:sponsor:delete" }
+  methods:  DELETE
+
+acte_index:
+  path:     /acte
+  defaults: { _controller: "BackOfficeBundle:Acte:index" }
+  methods:  GET
+
+
+
+acte_show:
+  path:     /{id}/showacte
+  defaults: { _controller: "BackOfficeBundle:Acte:show" }
+  methods:  GET
+
+acte_new:
+  path:     /newacte
+  defaults: { _controller: "BackOfficeBundle:Acte:new" }
+  methods:  [GET, POST]
+
+acte_edit:
+  path:     /{id}/editacte
+  defaults: { _controller: "BackOfficeBundle:Acte:edit" }
+  methods:  [GET, POST]
+
+acte_delete:
+  path:     /{id}/deleteacte
+  defaults: { _controller: "BackOfficeBundle:Acte:delete" }
+  methods:  DELETE
+
+actesponsor_show:
+    path:       /actesponsor
+    defaults:   { _controller: "BackOfficeBundle:Acte:actesp" }
+    methods:    Get
+
+ajoutacte_show:
+    path:       /ajoutacte
+    defaults:   { _controller: "BackOfficeBundle:Acte:ajoutactesp" }
+    methods:    Get
+
+notifier_user:
+    path: /notifier
+    defaults: { _controller: "BackOfficeBundle:assurance:notifier" }
+    methods:    Get
+
+events_index:
+    path:     /events
+    defaults: { _controller: "BackOfficeBundle:Events:index" }
+    methods:  GET
+
+coachfiltre:
+    path:     /coachf
+    defaults: { _controller: "BackOfficeBundle:Events:findCoach" }
+
+events_show:
+    path:     /{id}/showevents
+    defaults: { _controller: "BackOfficeBundle:Events:show" }
+    methods:  GET
+
+events_new:
+    path:     /newevents
+    defaults: { _controller: "BackOfficeBundle:Events:new" }
+    methods:  [GET, POST]
+
+events_edit:
+    path:     /{id}/editevents
+    defaults: { _controller: "BackOfficeBundle:Events:edit" }
+    methods:  [GET, POST]
+
+events_delete:
+    path:     /{id}/deleteevents
+    defaults: { _controller: "BackOfficeBundle:Events:delete" }
+    methods:  DELETE
+
+reservations_index:
+    path:     /Reservations
+    defaults: { _controller: "BackOfficeBundle:Reservations:index" }
+
+
+reservations_show:
+    path:     /{idr}/showReservations
+    defaults: { _controller: "BackOfficeBundle:Reservations:show" }
+    methods:  GET
+
+reservations_new:
+  path:     /newReservations
+  defaults: { _controller: "BackOfficeBundle:Reservations:new" }
+  methods:  [GET, POST]
+
+reservations_edit:
+  path:     /{idr}/editReservations
+  defaults: { _controller: "BackOfficeBundle:Reservations:edit" }
+  methods:  [GET, POST]
+
+reservations_delete:
+  path:     /{idr}/deleteReservations
+  defaults: { _controller: "BackOfficeBundle:Reservations:delete" }
+  methods:  DELETE
+
+
+

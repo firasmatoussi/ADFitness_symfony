@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Carttables list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cartTable in cartTables %}
+            <tr>
+                <td><a href="{{ path('carttable_show', { 'id': cartTable.id }) }}">{{ cartTable.id }}</a></td>
+                <td>{{ cartTable.name }}</td>
+                <td>{{ cartTable.price }}</td>
+                <td>{{ cartTable.quantity }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('carttable_show', { 'id': cartTable.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('carttable_edit', { 'id': cartTable.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('carttable_new') }}">Create a new cartTable</a>
+        </li>
+    </ul>
+{% endblock %}

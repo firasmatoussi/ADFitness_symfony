@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Liste des Fournisseurs</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            {% set flashbag_notices = app.session.flashbag.get('notice') %}
+            {%  if flashbag_notices is not empty  %}
+
+                {%  for notice in flashbag_notices %}
+                    <div class="col-sm-12">
+                        <div class="alert  alert-success alert-dismissible fade show" role="alert" >
+                            <div style="text-align: center">{{ notice }}</div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+
+            {% endif %}
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Table des Fournisseurs</strong>
+                    </div>
+
+                    <div class="card-body">
+                        <a class="btn btn-primary" href="{{ path('fournisseurs_new') }}">Ajouter un Fournisseur</a>
+
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                            <thead>
+                            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Telephone</th>
+                                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fournisseur in fournisseurs %}
+            <tr>
+                <td><a href="{{ path('fournisseurs_show', { 'id': fournisseur.id }) }}">{{ fournisseur.id }}</a></td>
+                <td>{{ fournisseur.nom }}</td>
+                <td>{{ fournisseur.adresse }}</td>
+                <td>{{ fournisseur.telephone }}</td>
+                <td>{{ fournisseur.email }}</td>
+                <td>
+                    <ul>
+
+                            <a class="btn btn-warning" href="{{ path('fournisseurs_show', { 'id': fournisseur.id }) }}">Afficher</a>
+
+                            <a class="btn btn-primary" href="{{ path('fournisseurs_edit', { 'id': fournisseur.id }) }}">Modifier</a>
+                        <a class="btn  btn-danger" href="{{ path('equipement_filtre', { 'nom': fournisseur.nom }) }}">Equipements</a>
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Gestion de Reservation</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="page-header float-right">
+                <div class="page-title">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Table cours</strong>
+                        </div>
+                        <div class="card-body">
+
+
+                            <form method="post" action="{{ path('reservations_index') }}">
+                                <label for="filtrer">Filtrer</label>
+                                <select name="choicer">
+                                    {% for r in events %}
+                                        <option>{{ r.titre }}</option>
+                                    {% endfor %}
+
+                                </select>
+                                <input type="submit" value="Voir reservation" class="btn btn-success" name="filtre_btn">
+                            </form>
+
+                            {# <form method="post" action="{{ path('cours_filtre') }}">
+                                 <label for="filtrer">Filtrer</label>
+                                 <input type="date" name="datecours">
+                                 <input type="submit" class="btn btn-warning" name="filtre_btn">
+                             </form>#}
+
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                <thead>
+                                <tr>
+
+                                    <th>Titre</th>
+                                    <th>Lieu</th>
+                                    <th>Nbp</th>
+                                    <th>Coach</th>
+                                    <th>Date</th>
+                                    <th>Descp</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for event in events %}
+                                    <tr>
+
+                                        <td>{{ event.titre }}</td>
+                                        <td>{{ event.lieu }}</td>
+                                        <td>{{ event.nbP }}</td>
+                                        <td>{{ event.coach }}</td>
+                                        <td>{% if event.date %}{{ event.date|date('Y-m-d') }}{% endif %}</td>
+                                        <td>{{ event.descp }}</td>
+                                        <td>
+
+
+                                            {# <input class="btn btn-primary" type="submit" value="Show Reservation">#}
+
+
+
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+    <h1>Equipements list</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Table des equipements</strong>
+                    </div>
+
+                    <div class="card-body">
+                        <a class="btn btn-primary" href="{{ path('equipements_new') }}">Ajouter equipement</a>
+
+                        <table id="bootstrap-data-table-export" class="table  table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Libelle</th>
+                <th>Domaine</th>
+                <th>Salle</th>
+                <th>Date</th>
+                <th>Etat</th>
+                <th>Fournisseur</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for equipement in equipements %}
+            {% if equipement.etat == 'Fonctionnel'%}
+                {% set color = 'a9f397' %}
+            {% elseif equipement.etat == 'Non Fonctionnel' %}
+                {% set color = 'f16961' %}
+            {% else %}
+                {% set color = 'c3c8db' %}
+            {% endif %}
+            <tr bgcolor={{ color }}>
+                <td><a href="{{ path('equipements_show', { 'id': equipement.id }) }}">{{ equipement.id }}</a></td>
+                <td>{{ equipement.reference }}</td>
+                <td>{{ equipement.libelle }}</td>
+                <td>{{ equipement.domaine }}</td>
+                <td>{{ equipement.salle }}</td>
+                <td>{% if equipement.date %}{{ equipement.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ equipement.etat }}</td>
+                <td><a href="{{ path('equipement_show_fournisseur', { 'nom': equipement.fournisseur }) }}">{{ equipement.fournisseur }}</a></td>
+                <td>
+                    <ul>
+
+                            <a class="btn btn-warning" href="{{ path('equipements_show', { 'id': equipement.id }) }}">Afficher</a>
+
+
+                            <a class="btn btn-primary" href="{{ path('equipements_edit', { 'id': equipement.id }) }}">Modifier</a>
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+                        <a class="btn btn-warning" href="{{ path('equipements_index') }}">Afficher toutes les equipements</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

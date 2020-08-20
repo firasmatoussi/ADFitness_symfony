@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Assurance edit</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+    <table width="35%">
+        <tr>
+
+        <td><input type="submit" value="Edit" /></td>
+    {{ form_end(edit_form) }}
+
+
+
+            <td>   <a href="{{ path('assurance_index') }}">Back to the list</a></td>
+
+            {{ form_start(delete_form) }}
+            <td>  <input type="submit" value="Delete"></td>
+            {{ form_end(delete_form) }}
+
+        </tr>
+    </table>
+{% endblock %}

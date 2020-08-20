@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Rechistoriques list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Lib</th>
+                <th>Exp</th>
+                <th>Dat</th>
+                <th>Tex</th>
+                <th>Etat</th>
+                <th>Reponse</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for recHistorique in recHistoriques %}
+            <tr>
+                <td><a href="{{ path('rechistorique_show', { 'id': recHistorique.id }) }}">{{ recHistorique.id }}</a></td>
+                <td>{{ recHistorique.lib }}</td>
+                <td>{{ recHistorique.exp }}</td>
+                <td>{% if recHistorique.dat %}{{ recHistorique.dat|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ recHistorique.tex }}</td>
+                <td>{% if recHistorique.etat %}Yes{% else %}No{% endif %}</td>
+                <td>{{ recHistorique.reponse }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('rechistorique_show', { 'id': recHistorique.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('rechistorique_edit', { 'id': recHistorique.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('rechistorique_new') }}">Create a new recHistorique</a>
+        </li>
+    </ul>
+{% endblock %}

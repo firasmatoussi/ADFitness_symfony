@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Detailes sur le fournisseur</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    {% set flashbag_notices = app.session.flashbag.get('notice') %}
+                    {%  if flashbag_notices is not empty  %}
+
+                            {%  for notice in flashbag_notices %}
+                                <div class="col-sm-12">
+                                    <div class="alert  alert-success alert-dismissible fade show" role="alert" >
+                                        <div style="text-align: center">{{ notice }}</div>
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+
+
+                    {% endif %}
+                    <div class="card-body">
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fournisseur.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ fournisseur.nom }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ fournisseur.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ fournisseur.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ fournisseur.email }}</td>
+            </tr>
+        </tbody>
+                        </table>
+
+                        <table>
+                            <tr><td>
+                                    <a class="btn btn-primary" href="{{ path('fournisseurs_index') }}">Retour</a>
+                                </td>
+
+
+                                <td>
+                                    <a class="btn btn-warning" href="{{ path('fournisseurs_edit', { 'id': fournisseur.id }) }}">Modifier</a>
+                                </td>
+
+
+                                <td>
+                                    {{ form_start(delete_form) }}
+                                    <input  role="button" type="submit" value="Delete" class="btn  btn-danger" onclick="confirm('Etes-vous sure de vouloir supprimer ce Fournisseur ?') || event.preventDefault()">
+                                    {{ form_end(delete_form) }}
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Fiche</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fiche.id }}</td>
+            </tr>
+            <tr>
+                <th>Idclient</th>
+                <td>{{ fiche.idclient }}</td>
+            </tr>
+            <tr>
+                <th>Naissance</th>
+                <td>{% if fiche.naissance %}{{ fiche.naissance|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Diabete</th>
+                <td>{% if fiche.diabete %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Hypo</th>
+                <td>{% if fiche.hypo %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Hyper</th>
+                <td>{% if fiche.hyper %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Perte</th>
+                <td>{% if fiche.perte %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Saignement</th>
+                <td>{% if fiche.saignement %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Fumeur</th>
+                <td>{% if fiche.fumeur %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Pratiquant</th>
+                <td>{% if fiche.pratiquant %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Perdre</th>
+                <td>{% if fiche.perdre %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Strength</th>
+                <td>{% if fiche.strength %}Yes{% else %}No{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('fiche_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('fiche_edit', { 'id': fiche.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

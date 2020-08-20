@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <p style=" background-color: #00fd00 ; -webkit-text-fill-color: black; ">un email a été envoyé vers l'adresse<b> {{ mail }}</b> pour lui informer</p>
+    <a  class="btn btn-primary" role="button" href="{{ path('assurance_index') }}">Retour</a>
+
+
+{% endblock %}

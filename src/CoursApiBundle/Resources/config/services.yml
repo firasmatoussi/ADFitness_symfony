@@ -1,0 +1,4 @@
+services:
+#    cours_api.example:
+#        class: CoursApiBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

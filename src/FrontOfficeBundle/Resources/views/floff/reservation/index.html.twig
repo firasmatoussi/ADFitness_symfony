@@ -1,0 +1,43 @@
+{% extends '@FrontOffice/AD-fitness/Cours.html.twig' %}
+
+{% block content %}
+    <h1>Reservations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Lib</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reservation in reservations %}
+            <tr>
+                <td><a href="{{ path('reservation_show_user', { 'id': reservation.id }) }}">{{ reservation.id }}</a></td>
+                <td>{{ reservation.lib }}</td>
+                <td>{{ reservation.username }}</td>
+                <td>{{ reservation.email }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('reservation_show_user', { 'id': reservation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('reservation_edit_user', { 'id': reservation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reservation_new_user') }}">Create a new reservation</a>
+        </li>
+    </ul>
+{% endblock %}

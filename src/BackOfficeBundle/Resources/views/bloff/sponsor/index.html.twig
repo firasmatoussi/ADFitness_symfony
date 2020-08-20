@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Sponsors list</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Sponsor</strong>
+                        </div>
+                        <div class="card-body">
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+
+    <table border="2" width="100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Domaine</th>
+                <th>Contact</th>
+                <th>Date_pacte</th>
+                <th width="30%">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sponsor in sponsors %}
+            <tr>
+                <td><a href="{{ path('sponsor_show', { 'id': sponsor.id }) }}">{{ sponsor.id }}</a></td>
+                <td>{{ sponsor.nom }} </td>
+                <td>{{ sponsor.domaine }}</td>
+                <td>{{ sponsor.contact }}</td>
+                <td>{{ sponsor.datepacte|date('Y-m-d') }}</td>
+                <td>
+
+                        <li> <a class="btn btn-primary" role="button" href="{{ path('sponsor_show', { 'id': sponsor.id }) }}">details sponsor</a></li>
+                        <li><a class="btn btn-warning" role="button" href="{{ path('sponsor_edit', { 'id': sponsor.id }) }}">edit sponsor</a> </li>
+                        <li><a class="btn btn-dark" role="button" href="{{ path('actesponsor_show',{ 'id': sponsor.id }) }}">Liste des actes</a> </li>
+                        <li><a class="btn btn-danger" role="button" href="{{ path('acte_new',{ 'id': sponsor.id,'nom': sponsor.nom }) }}">ajouter un acte</a> </li>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a class="btn btn-danger" role="button" href="{{ path('sponsor_new') }}">Create a new sponsor</a>
+        </li>
+    </ul>
+    <div class="row">
+        <div class="col-6">
+<table border="2" width="30%">
+    <h4>top 3 sponsors par nombre d'actes</h4>
+{% set nombre=0 %}
+{% for tp in top if nombre<3   %}
+    {% set nombre=nombre+1 %}
+    <tr>
+<td width="50%">{{ tp.nb }}</td>
+        <td>{{ tp.nm }}</td>
+    </tr>
+{% endfor %}
+</table></div>
+        <div class="col-6">
+    <table border="2" width="30%">
+        <h4>top 3 sponsors par montant total donnée</h4>
+        {% set nombre=0 %}
+        {% for tp in top2 if nombre<3   %}
+            {% set nombre=nombre+1 %}
+            <tr>
+                <td width="50%">{{ tp.mnt }}</td>
+                <td>{{ tp.nm }}</td>
+            </tr>
+        {% endfor %}
+
+    </table></div>
+    </div>
+{% endblock %}

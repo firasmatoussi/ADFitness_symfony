@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Equipements list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Libelle</th>
+                <th>Domaine</th>
+                <th>Salle</th>
+                <th>Date</th>
+                <th>Etat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for equipement in equipements %}
+            <tr>
+                <td><a href="{{ path('equipements_show', { 'id': equipement.id }) }}">{{ equipement.id }}</a></td>
+                <td>{{ equipement.reference }}</td>
+                <td>{{ equipement.libelle }}</td>
+                <td>{{ equipement.domaine }}</td>
+                <td>{{ equipement.salle }}</td>
+                <td>{% if equipement.date %}{{ equipement.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ equipement.etat }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('equipements_show', { 'id': equipement.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('equipements_edit', { 'id': equipement.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('equipements_new') }}">Create a new equipement</a>
+        </li>
+    </ul>
+{% endblock %}

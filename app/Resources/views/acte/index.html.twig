@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Actes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idsp</th>
+                <th>Nomsp</th>
+                <th>Date</th>
+                <th>Montant</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for acte in actes %}
+            <tr>
+                <td><a href="{{ path('acte_show', { 'id': acte.id }) }}">{{ acte.id }}</a></td>
+                <td>{{ acte.idsp }}</td>
+                <td>{{ acte.nomsp }}</td>
+                <td>{% if acte.date %}{{ acte.date|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ acte.montant }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('acte_show', { 'id': acte.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('acte_edit', { 'id': acte.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

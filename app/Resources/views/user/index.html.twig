@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Users list</h1>
+
+    <table width="80%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>username</th>
+                <th>email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('user_show', { 'id': user.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
+                        </li>
+                        {% set test=0 %}
+                        {%  for assurance in assurances %}
+                            {% if assurance.idu == user.id %}
+                                {%  set test=1 %}
+                            {% endif %}
+                        {% endfor %}
+                        {% if test==0 %}
+                            <li>
+                                <a href="{{ path('assurance_new', { 'idu': user.id ,'fullnam': user.username } ) }}">assurer</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('user_new') }}">Create a new user</a>
+        </li>
+    </ul>
+{% endblock %}

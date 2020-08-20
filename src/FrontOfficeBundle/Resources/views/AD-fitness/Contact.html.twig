@@ -1,0 +1,56 @@
+{% extends '@FrontOffice/Default/Home.html.twig' %}
+
+
+{% block aside %}
+    <aside id="colorlib-hero" class="colorlib-degree-bg">
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background-image: url({{ asset('template/images/img_bg_5.jpg') }});">
+                    <div class="overlay"></div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
+                                <div class="slider-text-inner text-center">
+                                    <h1>Contactez Nous</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+{% endblock %}
+
+{% block content %}
+    <div id="colorlib-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 animate-box">
+                    <h2>Informations de contact </h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="contact-info-wrap-flex">
+                                <div class="con-info">
+                                    <p><span><i class="icon-location-2"></i></span> Sokra,Tunis</p>
+                                </div>
+                                <div class="con-info">
+                                    <p><span><i class="icon-phone3"></i></span> <a href="tel://1234567920">+216 52 050 183</a></p>
+                                </div>
+                                <div class="con-info">
+                                    <p><span><i class="icon-paperplane"></i></span> <a href="mailto:info@yoursite.com">info@adfitness.tn</a></p>
+                                </div>
+                                <div class="con-info">
+                                    <p><span><i class="icon-globe"></i></span> <a href="#">adfitness.tn</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+

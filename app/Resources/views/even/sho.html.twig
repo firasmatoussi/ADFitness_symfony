@@ -1,0 +1,50 @@
+{% extends '@FrontOffice/AD-fitness/Evenements.html.twig' %}
+
+{% block content %}
+
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ event.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ event.titre }}</td>
+            </tr>
+            <tr>
+                <th>Lieu</th>
+                <td>{{ event.lieu }}</td>
+            </tr>
+            <tr>
+                <th>Nbp</th>
+                <td>{{ event.nbP }}</td>
+            </tr>
+            <tr>
+                <th>Coach</th>
+                <td>{{ event.coach }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td> {{ event.date}}</td>
+            </tr>
+            <tr>
+                <th>Descp</th>
+                <td>{{ event.descp }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('event_index') }}">Back to the list</a>
+        </li>
+
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

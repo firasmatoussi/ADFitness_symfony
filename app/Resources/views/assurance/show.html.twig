@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Assurance</h1>
+
+    <table border="2">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ assurance.id }}</td>
+            </tr>
+            <tr>
+                <th>Idu</th>
+                <td>{{ assurance.idu }}</td>
+            </tr>
+            <tr>
+                <th>Fullname</th>
+                <td>{{ assurance.fullname }}</td>
+            </tr>
+            <tr>
+                <th>Companie</th>
+                <td>{{ assurance.companie }}</td>
+            </tr>
+            <tr>
+                <th>Expire</th>
+                <td>{% if assurance.expire %}{{ assurance.expire|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('assurance_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('assurance_edit', { 'id': assurance.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

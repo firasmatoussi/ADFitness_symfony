@@ -1,0 +1,194 @@
+{#{% extends 'base.html.twig' %}
+
+{% block content %}
+
+
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>modification d'un equipement</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="page-header float-right">
+                <div class="page-title">
+                    <ol class="breadcrumb text-right">
+                        <li><a href="#">Course Management</a></li>
+                        <li><a href="#">Table</a></li>
+                        <li class="active">Course table</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Course table</strong>
+                        </div>
+                        <div class="card-body">
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                <tbody>
+                                <tr>
+                                    <th>Id</th>
+                                    <td>{{ cour.id }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Lib</th>
+                                    <td>{{ cour.lib }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Type</th>
+                                    <td>{{ cour.type }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Salle</th>
+                                    <td>{{ cour.salle }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Coachname</th>
+                                    <td>{{ cour.coachName }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Date</th>
+                                    <td>{% if cour.date %}{{ cour.date|date('Y-m-d') }}{% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <th>Nbplace</th>
+                                    <td>{{ cour.nbPlace }}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <table>
+                                <tr><td>
+                                        <a class="btn btn-primary" role="button" href="{{ path('cours_index') }}">Back to the list</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="btn btn-warning" role="button" href="{{ path('cours_edit', { 'id': cour.id }) }}">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        {{ form_start(delete_form) }}
+                                        <input class="btn btn-primary" role="button" type="submit" value="Delete">
+                                        {{ form_end(delete_form) }}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}#}
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Detailes sur l'equipement</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    {% set flashbag_notices = app.session.flashbag.get('notice') %}
+                    {%  if flashbag_notices is not empty  %}
+
+                        {%  for notice in flashbag_notices %}
+                            <div class="col-sm-12">
+                                <div class="alert  alert-success alert-dismissible fade show" role="alert" >
+                                    <div style="text-align: center">{{ notice }}</div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+
+
+                    {% endif %}
+                    <div class="card-body">
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ equipement.id }}</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>{{ equipement.reference }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ equipement.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Domaine</th>
+                <td>{{ equipement.domaine }}</td>
+            </tr>
+            <tr>
+                <th>Salle</th>
+                <td>{{ equipement.salle }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if equipement.date %}{{ equipement.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ equipement.etat }}</td>
+            </tr>
+            <tr>
+                <th>Fournisseur</th>
+                <td>{{ equipement.fournisseur }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+                        <table>
+                            <tr><td>
+            <a class="btn btn-primary" href="{{ path('equipements_index') }}">Retour</a>
+                                </td>
+                                <td>
+            <a class="btn btn-warning" href="{{ path('equipements_edit', { 'id': equipement.id }) }}">Edit</a>
+                                </td>
+                                <td></td>
+
+                                <td>
+                                    {{ form_start(delete_form) }}
+                                    <input  role="button" type="submit" value="Delete" class="btn  btn-danger" onclick="confirm('Etes-vous sure de vouloir supprimer cet equipement ?') || event.preventDefault()">
+                                    {{ form_end(delete_form) }}
+
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,896 @@
+{% if error is defined %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+{% endif %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% block title %}<title>AD Fitness</title> {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    {% block stylesheet %}
+
+        <link rel="stylesheet" href="{{ asset('template/css/style1.css') }}">
+
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,700" rel="stylesheet">
+
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="{{ asset('template/css/animate.css') }}">
+        <!-- Icomoon Icon Fonts-->
+        <link rel="stylesheet" href="{{ asset('template/css/icomoon.css') }}">
+
+        <!-- Bootstrap-->
+        <link href="{{asset('template/css/bootstrap.css')}}" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+
+        <!-- Magnific Popup -->
+        <link rel="stylesheet" href="{{ asset('template/css/magnific-popup.css') }}">
+
+        <!-- Flexslider  -->
+        <link rel="stylesheet" href="{{ asset('template/css/flexslider.css') }}" }}>
+
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="{{ asset('template/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('template/css/owl.theme.default.min.css') }}">
+
+        <!-- Flaticons  -->
+        <link rel="stylesheet" href="{{ asset('template/fonts/flaticon/font/flaticon.css') }}">
+
+        <!-- Date Picker -->
+        <link rel="stylesheet" href="{{ asset('template/css/bootstrap-datepicker.css') }}">
+
+        <!-- Theme style-->
+        <link rel="stylesheet" href="{{ asset('template/css/style.css') }}">
+
+        <!-- Modernizr JS -->
+        <script src="{{ asset('template/js/modernizr-2.6.2.min.js') }}"></script>
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src="{{ asset('template/js/respond.min.js') }}"></script>
+        <![endif]-->
+
+        <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+
+        <!-- Slick -->
+        <link type="text/css" rel="stylesheet" href="{{ asset('prod/css/slick.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{ asset('prod/css/slick-theme.css') }}" />
+        <!-- nouislider -->
+        <link type="text/css" rel="stylesheet" href="{{ asset('prod/css/nouislider.min.css') }}" />
+
+        <!-- Font Awesome Icon -->
+        <link rel="stylesheet" href="{{ asset('prod/css/font-awesome.min.css') }}">
+
+        <!-- Custom stlylesheet -->
+        <link type="text/css" rel="stylesheet" href="{{ asset('prod/css/style.css') }}" />
+
+    {% endblock %}
+</head>
+
+<body>
+{% block header %}
+    <div class="colorlib-loader"></div>
+
+<div id="page">
+    <nav class="colorlib-nav" role="navigation">
+        <div class="top-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div id="colorlib-logo"><a href="{{ path('front_office_homepage') }}">AD Fitness</a></div>
+                    </div>
+                    <div class="col-md-10 text-right menu-1">
+                        <ul>
+                            <li><a href="{{ path('front_office_homepage') }}">Acceuil</a></li>
+                            <li><a href="{{ path('cours_index') }}">Cours</a></li>
+                            <li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Produits<i class="fa fa-caret-down"></i></a>
+                                <div class="custom-menu">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="hidden-sm hidden-xs">
+                                                <a class="banner banner-1" href="#">
+                                                    <img src="{{ asset('prod/img/Protein1.jpeg') }}" alt="" style="width: 200px; height:150px;">
+                                                    <div class="banner-caption text-center">
+                                                        <h3 class="white-color text-uppercase">Protein</h3>
+                                                    </div>
+                                                </a>
+                                                <hr>
+                                            </div>
+                                            <ul class="list-links">
+                                                <li><a href="{{ path('home_produits') }}" style="color: #1a1a1a;">Product Home</a></li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="hidden-sm hidden-xs">
+                                                <a class="banner banner-1" href="#">
+                                                    <img src="{{ asset('prod/img/amino.jpg') }}" alt="" style="width: 200px; height:150px;">
+                                                    <div class="banner-caption text-center">
+                                                        <h3 class="white-color text-uppercase">AminoAcids</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <hr>
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="hidden-sm hidden-xs">
+                                                <a class="banner banner-1" href="#">
+                                                    <img src="{{ asset('prod/img/cratin.jpg') }}" alt="" style="width: 200px; height:150px;">
+                                                    <div class="banner-caption text-center">
+                                                        <h3 class="white-color text-uppercase">Creatine</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <hr>
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="hidden-sm hidden-xs">
+                                                <a class="banner banner-1" href="#">
+                                                    <img src="{{ asset('prod/img/bcaa.jpg') }}" alt="" style="width: 200px; height:150px;">
+                                                    <div class="banner-caption text-center">
+                                                        <h3 class="white-color text-uppercase">BCAA</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <hr>
+                                            <ul class="list-links">
+                                                <li>
+                                                <li><a href="{{ path('List_Product') }}" style="color: #1a1a1a;">View All Product</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="{{ path('event_index') }}">Evénements</a></li>
+                            <li><a href="{{ path('home_contact') }}">Contact</a></li>
+
+                            {% block cnx %}
+                                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+                                    <li class="dropdown my-account">
+                                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                            <span class="glyphicon glyphicon-user"></span>{{ app.user.username }}
+                                            <span class="glyphicon glyphicon-chevron-down"></span>
+                                        </a>
+                                        <ul id="dropdown_menu_panier" role="menu" class="custom-menu">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <strong class="card-title mb-3"><center>Profile</center></strong>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="mx-auto d-block">
+                                                        <img class="rounded-circle mx-auto d-block" src="{{ asset('template/images/admin.jpg') }}" alt="Card image cap">
+                                                        <h5 class="text-sm-center mt-2 mb-1"><center>{{ app.user.username }}</center></h5>
+                                                        <div class="location text-sm-center"><i class="fa fa-map-marker"></i><center> California, United States</center></div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="card-text text-sm-center">
+                                                        <ul>
+                                                            <center>   <li> <a href="{{ path('fos_user_profile_show') }}" style="color: #0b0b0b;">Mon profil</a></li> <br> </center> <br>
+                                                            <center>     <li>  <a href="{{ path('fos_user_profile_edit') }}" style="color: #0b0b0b;">Paramétres</a></li> <br> </center>
+                                                            <center> <li> <a href="{{ path('fos_user_change_password') }}" style="color: #0b0b0b;"><center>Changer mot de passe</center></a></li> <br> </center>
+                                                            <center> <li> <a href="{{ path('fos_user_security_logout') }}" style="color: #0b0b0b;">Déconnexion</a></li> </center>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--   <li><a href="{{ path('fos_user_profile_show') }}" style="color: #0b0b0b;">Mon profil</a></li>
+                                    <li><a href="{{ path('fos_user_profile_edit') }}" style="color: #0b0b0b;">Paramétres du compte</a></li>
+                                    <li><a href="{{ path('fos_user_change_password') }}" style="color: #0b0b0b;">Changer mot de passe</a>
+                                    </li>
+                                    <li><a href="{{ path('fos_user_security_logout') }}" style="color: #0b0b0b;">Déconnexion</a></li> -->
+                                        </ul>
+                                    </li>
+
+                                {% else %}
+                                    <li class="header-cart dropdown default-dropdown">
+
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="glyphicon glyphicon-user"></span> 
+                                            Login
+                                            <span class="glyphicon glyphicon-chevron-down"></span>
+                                        </a>
+                                        <div class="custom-menu" style="padding: 15px; padding-bottom: 0px">
+                                            <!--<div class="sufee-login d-flex align-content-center flex-wrap">
+                                                <div class="container-fluid">
+                                                    <div class="dropdown-content">
+                                                        <div class="login-logo">
+                                                            <a href="index.html">
+                                                                <img class="align-content" src="images/logo.png" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="login-form"> -->
+                                            <form class="ws-login-form" action="{{ path("fos_user_security_check") }}" method="post">
+                                                <p>Log in to Your Account</p> <br>
+                                                <input type="hidden" name="_csrf_token" value="{{  render(controller('FrontOfficeBundle:Default:getToken')) }}" />
+
+                                                <label>{{ 'Username'|trans }}</label>
+                                                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" class="form-control" placeholder="Username">
+
+
+                                                <label>{{ 'Password'|trans }}</label>
+                                                <input type="password" id="password" name="_password" required="required" autocomplete="current-password"  class="form-control" placeholder="Password">
+
+                                                <label for="remember_me">
+                                                    <input type="checkbox" id="remember_me" name="_remember_me" value="on"> {{ 'remember me'|trans }}
+                                                </label>
+
+                                                <label class="pull-right">
+                                                    <center><a href="{{ path('fos_user_resetting_request') }}" style="color: #0b0b0b;"><p>Forgotten Password?</p></a></center>
+                                                </label>
+                                                <input type="submit" id="_submit" name="_submit" value="{{ 'Login Now!'|trans }}" class="btn btn-lg btn-primary btn-block"/>
+                                                <!--
+                                                <div class="social-login-content">
+                                                    <div class="social-button">
+                                                        <button type="button" class="btn social facebook btn-flat btn-addon mb-3"><i class="ti-facebook"></i>Sign in with facebook</button>
+                                                        <button type="button" class="btn social twitter btn-flat btn-addon mt-2"><i class="ti-twitter"></i>Sign in with twitter</button>
+                                                    </div>
+                                                </div>
+                                                -->
+
+                                                <!-- div mta3 register-->
+                                                <div class="register-link m-t-15 text-center">
+                                                    <a href="{{ path('fos_user_registration_register') }}" style="color: #0b0b0b;">
+                                                        <p>Don't have account ? <br> Sign up now!</p>
+                                                    </a>
+                                                </div>
+                                                <!--End div mta3 register -->
+
+                                            </form>
+                                        </div>
+
+                                    </li>
+                                {% endif %}
+                            {% endblock %}
+
+
+
+                            <!-- Cart -->
+                            <li class="header-cart dropdown default-dropdown">
+
+                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <i class="fa fa-shopping-cart" style="position: relative;top: 0px;left: 30px;"></i>
+                                    <span class="qty" style="position: relative;top: -9px;left: 30px;">{{ qte | length }}</span>
+                                    <br>
+
+                                </a>
+                                <div class="custom-menu">
+                                    <div id="shopping-cart">
+                                        <div class="shopping-cart-list">
+
+                                            {% set total=0 %}
+                                            {% set index = 0 %}
+                                            {% set break = false %}
+                                            {% set a = ( qte | length ) %}
+                                            {% for productMagasin in produits  %}
+                                                {% set root = "uploads/brochures/" %}
+
+                                                {% set  imgpath = productMagasin.image %}
+
+                                                {% set urlParam = root ~ imgpath  %}
+                                                {%  set sold= productMagasin.price - ( productMagasin.price * productMagasin.solde )/100  %}
+                                                <div class="product product-widget">
+                                                    <div class="product-thumb">
+                                                        <img src="{{ asset(urlParam) }}" alt="">
+                                                    </div>
+                                                    <div class="product-body">
+                                                        <h3 class="product-price" style="position: relative; left: -30px;">{{ sold }}DT <span class="qty"></span></h3>
+                                                        <h2 class="product-name"><a href="#">{{ productMagasin.name }}</a></h2>
+                                                    </div>
+
+
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+
+                                        <div class="shopping-cart-btns">
+                                            <ul>
+                                                <li><button onclick="window.location.href='{{ path("Cart") }}'" class="main-btn">View Cart</button></li>
+                                                <li><button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- /Cart -->
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    {% endblock %}
+    {% block aside %}
+        <aside id="colorlib-hero" class="colorlib-degree-bg">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li style="background-image: url({{ asset('template/images/img_bg_1.jpg') }});">
+                        <div class="overlay"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
+                                    <div class="slider-text-inner text-center">
+                                        <h1>C'est un style de vie il n'y a pas de ligne d'arrivée</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="background-image: url({{ asset('template/images/img_bg_2.jpg') }});">
+                        <div class="overlay"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 slider-text">
+                                    <div class="slider-text-inner text-center">
+                                        <h1>Ne vous arrêtez pas quand ça fait mal, arrêtez quand vous avez fini</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="background-image: url({{ asset('template/images/img_bg_3.jpg') }});">
+                        <div class="overlay"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
+                                    <div class="slider-text-inner text-center">
+                                        <h1>Arrête de vouloir, commence à faire</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="background-image: url({{ asset('template/images/img_bg_4.jpg') }});">
+                        <div class="overlay"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2 slider-text">
+                                    <div class="slider-text-inner text-center">
+                                        <h1>S'entraîner est une récompense et non une punition</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </aside>
+
+    {% endblock %}
+
+    {% block content %}
+
+        <div id="colorlib-services" class="colorlib-degree-bg-full">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+                        <h2>Travailler dur rester modeste </h2>
+                        <p>Même le tout-puissant Pointing n’a aucun contrôle sur les textes aveugles, c’est une vie presque non orthographique. Un jour cependant, une petite ligne de textes aveugles du nom</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6 text-center animate-box">
+                                <div class="services">
+									<span class="icon">
+										<i class="flaticon-gym"></i>
+									</span>
+                                    <div class="desc">
+                                        <h3>Fitness</h3>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center animate-box">
+                                <div class="services">
+									<span class="icon">
+										<i class="flaticon-weightlifting"></i>
+									</span>
+                                    <div class="desc">
+                                        <h3>Body Building</h3>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center animate-box">
+                                <div class="services">
+									<span class="icon">
+										<i class="flaticon-martial-arts"></i>
+									</span>
+                                    <div class="desc">
+                                        <h3>Taekwondo</h3>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center animate-box">
+                                <div class="services">
+									<span class="icon">
+										<i class="flaticon-gloves"></i>
+									</span>
+                                    <div class="desc">
+                                        <h3>Boxe</h3>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12 animate-box">
+                                <div class="services-img" style="background-image: url({{ asset('template/images/classes-1.jpg') }});"></div>
+                            </div>
+                            <div class="col-md-6 animate-box">
+                                <div class="services-img" style="background-image: url({{ asset('template/images/classes-2.jpg')}});"></div>
+                            </div>
+                            <div class="col-md-6 animate-box">
+                                <div class="services-img" style="background-image: url({{ asset('template/images/classes-3.jpg') }});"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="colorlib-schedule" class="colorlib-light-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+                        <h2>Notre horaire de cours</h2>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="schedule text-center animate-box">
+                        <div class="col-md-12">
+                            <ul class="week">
+                                <li class="active"><a href="#">Dimanche</a></li>
+                                <li><a href="#">Lundi</a></li>
+                                <li><a href="#">Mardi</a></li>
+                                <li><a href="#">Mercredi</a></li>
+                                <li><a href="#">Jeudi</a></li>
+                                <li><a href="#">Vendredi</a></li>
+                                <li><a href="#">Samedi</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="schedule-flex">
+                            <div class="entry-forth">
+                                <p class="icon"><span><i class="flaticon-gym"></i></span></p>
+                                <p class="time"><span>06am - 8am</span></p>
+                                <h3>Cardio Program</h3>
+                                <p class="trainer"><span>Tom Scott</span></p>
+                            </div>
+                            <div class="entry-forth">
+                                <p class="icon"><span><i class="flaticon-exercise-2"></i></span></p>
+                                <p class="time"><span>06am - 8am</span></p>
+                                <h3>Loose Weight Program</h3>
+                                <p class="trainer"><span>Tom Scott</span></p>
+                            </div>
+                            <div class="entry-forth">
+                                <p class="icon"><span><i class="flaticon-meditation"></i></span></p>
+                                <p class="time"><span>06am - 8am</span></p>
+                                <h3>Yoga Classes</h3>
+                                <p class="trainer"><span>Tom Scott</span></p>
+                            </div>
+                            <div class="entry-forth">
+                                <p class="icon"><span><i class="flaticon-gloves"></i></span></p>
+                                <p class="time"><span>06am - 8am</span></p>
+                                <h3>Boxing Program</h3>
+                                <p class="trainer"><span>Tom Scott</span></p>
+                            </div>
+                        </div>
+                        <div class="schedule-flex">
+                            <div class="entry-forth">
+                                <p class="icon"><span><i class="flaticon-martial-arts"></i></span></p>
+                                <p class="time"><span>06am - 8am</span></p>
+                                <h3>Karate Classes</h3>
+                                <p class="trainer"><span>Tom Scott</span></p>
+                            </div>
+                            <div class="entry-forth">
+                                <p class="icon"><span><i class="flaticon-weightlifting"></i></span></p>
+                                <p class="time"><span>06am - 8am</span></p>
+                                <h3>Body Building</h3>
+                                <p class="trainer"><span>Tom Scott</span></p>
+                            </div>
+                            <div class="entry-forth">
+                                <p class="icon"><span><i class="flaticon-swimmer"></i></span></p>
+                                <p class="time"><span>06am - 8am</span></p>
+                                <h3>Swimming Program</h3>
+                                <p class="trainer"><span>Tom Scott</span></p>
+                            </div>
+                            <div class="entry-forth">
+                                <p class="icon"><span><i class="flaticon-man"></i></span></p>
+                                <p class="time"><span>06am - 8am</span></p>
+                                <h3>Basic Exercise</h3>
+                                <p class="trainer"><span>Tom Scott</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="colorlib-shop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+                        <h2>Nos Produits</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6 text-center animate-box">
+                        <div class="product-entry">
+                            <div class="product-img" style="background-image: url({{ asset('template/images/item-1.jpg') }});">
+                                <div class="cart">
+                                    <p>
+                                        <span class="addtocart"><a href="#"><i class="icon-cart"></i></a></span>
+                                        <span><a href="#"><i class="icon-eye"></i></a></span>
+                                        <span><a href="#"><i class="icon-heart3"></i></a></span>
+                                        <span><a href="#"><i class="icon-pie-chart"></i></a></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <h3><a href="product-detail.html">Boxing Gloves</a></h3>
+                                <p class="price"><span>$300.00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 text-center animate-box">
+                        <div class="product-entry">
+                            <div class="product-img" style="background-image: url({{ asset('template/images/item-2.jpg') }});">
+                                <div class="cart">
+                                    <p>
+                                        <span class="addtocart"><a href="#"><i class="icon-cart"></i></a></span>
+                                        <span><a href="#"><i class="icon-eye"></i></a></span>
+                                        <span><a href="#"><i class="icon-heart3"></i></a></span>
+                                        <span><a href="#"><i class="icon-pie-chart"></i></a></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <h3><a href="product-detail.html">Dumbell</a></h3>
+                                <p class="price"><span>$199.00</span> <span class="sale">$300.00</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 text-center animate-box">
+                        <div class="product-entry">
+                            <div class="product-img" style="background-image: url({{ asset('template/images/item-3.jpg') }});">
+                                <div class="cart">
+                                    <p>
+                                        <span class="addtocart"><a href="#"><i class="icon-cart"></i></a></span>
+                                        <span><a href="#"><i class="icon-eye"></i></a></span>
+                                        <span><a href="#"><i class="icon-heart3"></i></a></span>
+                                        <span><a href="#"><i class="icon-pie-chart"></i></a></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <h3><a href="product-detail.html">Shoes</a></h3>
+                                <p class="price"><span>$300.00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 text-center animate-box">
+                        <div class="product-entry">
+                            <div class="product-img" style="background-image: url({{ asset('template/images/item-4.jpg') }});">
+                                <div class="cart">
+                                    <p>
+                                        <span class="addtocart"><a href="#"><i class="icon-cart"></i></a></span>
+                                        <span><a href="#"><i class="icon-eye"></i></a></span>
+                                        <span><a href="#"><i class="icon-heart3"></i></a></span>
+                                        <span><a href="#"><i class="icon-pie-chart"></i></a></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <h3><a href="product-detail.html">Yoga Mat</a></h3>
+                                <p class="price"><span>$300.00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="colorlib-counter" class="colorlib-counters colorlib-degree-bg" style="background-image: url({{ asset('template/images/intro-img-1.jpg') }});" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+
+                    </div>
+                </div>
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="colorlib-trainers">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+                        <h2>Nos Entraîneurs</h2>
+                    </div>
+                </div>
+                <div class="row animate-box">
+                    <div class="owl-carousel">
+                        <div class="item">
+                            <div class="col-md-12 text-center">
+                                <div class="trainers-entry">
+                                    <div class="trainer-img" style="background-image: url({{ asset('template/images/trainer-1.jpg') }})"></div>
+                                    <div class="desc">
+                                        <h3>Diego Carter</h3>
+                                        <span>Entraîneur de musculation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-md-12 text-center">
+                                <div class="trainers-entry">
+                                    <div class="trainer-img" style="background-image: url({{ asset('template/images/trainer-2.jpg') }})"></div>
+                                    <div class="desc">
+                                        <h3>Lea Young</h3>
+                                        <span>Entraîneur de yoga</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-md-12 text-center">
+                                <div class="trainers-entry">
+                                    <div class="trainer-img" style="background-image: url({{ asset('template/images/trainer-4.jpg') }})"></div>
+                                    <div class="desc">
+                                        <h3>Alysha Reed</h3>
+                                        <span>Entraîneur de danse</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-md-12 text-center">
+                                <div class="trainers-entry">
+                                    <div class="trainer-img" style="background-image: url({{ asset('template/images/trainer-2.jpg') }})"></div>
+                                    <div class="desc">
+                                        <h3>George Cooper</h3>
+                                        <span>Entraîneur de boxe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-md-12 text-center">
+                                <div class="trainers-entry">
+                                    <div class="trainer-img" style="background-image: url({{ asset('template/images/img_bg_2.jpg') }});"></div>
+                                    <div class="desc">
+                                        <h3>Melody Moxin</h3>
+                                        <span>Entraîneur de boxe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="colorlib-blog colorlib-light-grey colorlib-degree-bg-full">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+                        <h2>Cours</h2>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="colorlib-event">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+                        <h2>Evènements à venir
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="colorlib-gallery">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+                    <h2>Our Gallery</h2>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 animate-box">
+                    <a href="images/classes-1.jpg" class="gallery-img image-popup" style="background-image: url({{ asset('template/images/classes-1.jpg') }});">
+                        <span class="icon"><i class="icon-plus2"></i></span>
+                    </a>
+                    <a href="images/classes-2.jpg" class="gallery-img image-popup" style="background-image: url({{ asset('template/images/classes-2.jpg') }});">
+                        <span class="icon"><i class="icon-plus2"></i></span>
+                    </a>
+                    <a href="images/classes-3.jpg" class="gallery-img image-popup" style="background-image: url({{ asset('template/images/classes-3.jpg') }});">
+                        <span class="icon"><i class="icon-plus2"></i></span>
+                    </a>
+                    <a href="images/classes-4.jpg" class="gallery-img image-popup" style="background-image: url({{ asset('template/images/classes-4.jpg') }});">
+                        <span class="icon"><i class="icon-plus2"></i></span>
+                    </a>
+                    <a href="images/classes-5.jpg" class="gallery-img image-popup" style="background-image: url({{ asset('template/images/classes-5.jpg') }});">
+                        <span class="icon"><i class="icon-plus2"></i></span>
+                    </a>
+                    <a href="images/classes-6.jpg" class="gallery-img image-popup" style="background-image: url({{ asset('template/images/classes-6.jpg') }});">
+                        <span class="icon"><i class="icon-plus2"></i></span>
+                    </a>
+                    <a href="images/classes-7.jpg" class="gallery-img image-popup" style="background-image: url({{ asset('template/images/classes-7.jpg') }});">
+                        <span class="icon"><i class="icon-plus2"></i></span>
+                    </a>
+                    <a href="images/classes-8.jpg" class="gallery-img image-popup" style="background-image: url({{ asset('template/images/classes-8.jpg') }});">
+                        <span class="icon"><i class="icon-plus2"></i></span>
+                    </a>
+                    <a href="images/classes-9.jpg" class="gallery-img image-popup" style="background-image: url({{ asset('template/images/classes-9.jpg') }});">
+                        <span class="icon"><i class="icon-plus2"></i></span>
+                    </a>
+                    <a href="images/classes-1.jpg" class="gallery-img image-popup" style="background-image: url({{ asset('template/images/classes-1.jpg') }});">
+                        <span class="icon"><i class="icon-plus2"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block footer %}
+        <footer id="colorlib-footer">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-3 col-md-6 clearfix wow fadeInLeft" data-wow-delay="0.5s">
+                        <div class="col colorlib-widget">
+                            <h4>À PROPOS AD Fitness</h4>
+                            <p>C'est un site developpé par équipe Dev-Crew</p>
+
+                            <ul class="colorlib-social-icons">
+                                <li><a href="https://twitter.com/"><i class="icon-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/"><i class="icon-facebook"></i></a></li>
+                                <li><a href="https://www.linkedin.com/"><i class="icon-linkedin"></i></a></li>
+                                <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="col-md-3 colorlib-widget">
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-3 col-md-6 clearfix wow fadeInRight" data-wow-delay="0.5s">
+                        <div class="col colorlib-widget">
+                            <h4>Contact Info</h4>
+                            <ul class="colorlib-footer-links">
+                                <li> Sokra,Tunis</li>
+                                <li><a href="tel://1234567920"><i class="icon-phone"></i> +216 52 050 183</a></li>
+                                <li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@adfitness.tn</a></li>
+                                <li><a href="http://luxehotel.com"><i class="icon-location4"></i> adfitness.tn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="copy">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p>
+                                <small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | AD-Ftiness
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </footer>
+    {% endblock %}
+</div>
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+</div>
+
+{% block script %}
+    <!-- jQuery
+<script src="{{ asset('template/js/jquery.min.js') }}"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="{{ asset('template/js/jquery.easing.1.3.js') }}"></script>
+    <!-- Bootstrap
+<script src="{{ asset('template/js/bootstrap.min.js') }}"></script>  -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="{{ asset('template/js/jquery.waypoints.min.js') }}"></script>
+    <!-- Stellar Parallax -->
+    <script src="{{ asset('template/js/jquery.stellar.min.js') }}"></script>
+    <!-- Flexslider -->
+    <script src="{{ asset('template/js/jquery.flexslider-min.js') }}"></script>
+    <!-- Owl carousel -->
+    <script src="{{ asset('template/js/owl.carousel.min.js') }}"></script>
+    <!-- Magnific Popup -->
+    <script src="{{ asset('template/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('template/js/magnific-popup-options.js') }}"></script>
+    <!-- Counters -->
+    <script src="{{ asset('template/js/jquery.countTo.js') }}"></script>
+    <!-- Date Picker -->
+    <script src="{{ asset('template/js/bootstrap-datepicker.js') }}"></script>
+    <!-- Main -->
+    <script src="{{ asset('template/js/main.js') }}"></script>
+    <!-- -->
+    <script src="{{ asset('template/js/wow.min.js') }}"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <script src="{{ asset('template/js/widgets.js') }}"></script>
+
+    <script src="{{ asset('prod/js/slick.min.js') }}"></script>
+    <script src="{{ asset('prod/js/nouislider.min.js') }}"></script>
+    <script src="{{ asset('prod/js/jquery.zoom.min.js') }}"></script>
+    <script src="{{ asset('prod/js/main.js') }}"></script>
+
+
+
+{% endblock %}
+</body>
+</html>

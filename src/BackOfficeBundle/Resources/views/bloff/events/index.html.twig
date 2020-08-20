@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+ <h1>Les évènements</h1>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Gestion des évènements</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Table Events</strong>
+                    </div>
+                    <div class="card-body">
+
+                        <form method="post" action="{{ path('coachfiltre') }}">
+                            <label for="filtrer2">Chercher un entraîneur</label>
+                            <select name="firas">
+                                <option>Takoua Riahi</option>
+                                <option>Houssem Ben Achour</option>
+                                <option>Sabri Ben Marzouk</option>
+                                <option>Amine Khemiri</option>
+                                <option>Firas Matoussi </option>
+                                <option>Walid Nsiri</option>
+
+
+                            </select>
+                            <input class="btn btn-danger" type="submit" value="Cherher">
+                        </form>
+
+
+
+                        <br>
+                        <a class="btn btn-primary" role="button" href="{{ path('events_new') }}">Ajouter un nouveau event</a>
+
+
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Lieu</th>
+                <th>Nbp</th>
+                <th>Coach</th>
+                <th>Date</th>
+                <th>Descp</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            <tr>
+
+                <td>{{ event.titre }}</td>
+                <td>{{ event.lieu }}</td>
+                <td>{{ event.nbP }}</td>
+                <td>{{ event.coach }}</td>
+                <td>{% if event.date %}{{ event.date|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ event.descp }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('events_show', { 'id': event.id }) }}">show</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ path('events_edit', { 'id': event.id }) }}">edit</a>
+                        </li>
+                        <li>
+                            {{ socialButtons() }}
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+{% endblock %}

@@ -1,0 +1,240 @@
+{% extends '@FrontOffice/AD-fitness/Cours.html.twig' %}
+
+
+
+
+
+
+{% block content %}
+
+
+
+    <div class="colorlib-classes">
+        <div class="container">
+            <div class="row">
+
+
+                {% for c in cours %}
+
+
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="classes">
+                            <div class="classes-img" style="background-image: url({{ asset('template/images/rjel.jpg') }});">
+                                <p class="price text-center"><span>Places <br> {{ c.nbPlace }}</span></p>
+
+                                <div class="desc">
+                                    <h3><a style="color: #f5c6cb; font-size: 30px">{{ c.lib }}</a></h3>
+                                    <h3><a style="color: white;">{{ c.coachName }}</a></h3>
+                                    <h3><a style="color: white;">{% if c.date %}{{ c.date|date('Y-m-d') }}{% endif %}</a></h3>
+
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <h3><a>
+                                        {% if c.nbPlace  %}
+                                            <td><a class="btn btn-success" role="button" href="{{ path('reservation_new_user',{ 'id':c.id})}}">Reserver</a></td>
+
+                                        {% else %}
+                                            <td><p style="color: orangered;">Complet</p></td>
+                                        {% endif %}
+                                    </a></h3>
+
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div id="colorlib-counter" class="colorlib-counters colorlib-degree-bg" style="background-image: url({{ asset('template/images/cours.jpg') }});" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" action="{{ path('filtre_type_user') }}">
+
+                                <label for="filtrer">Chercher un cours</label>
+                                <select name="fu">
+                                    <option>Musculation</option>
+                                    <option>Fitness</option>
+                                    <option>Natation</option>
+                                    <option>Aerobic Sportive</option>
+                                    <option>Lutte Libre</option>
+                                    <option>Boxe</option>
+                                </select>
+                                <input type="submit" value="Chercher" class="btn btn-success" name="filtre_btn">
+                            </form>
+
+
+
+
+                            <form method="post" action="{{ path('filtre_coach_user') }}">
+                                <label for="filtrer2">Chercher un entraîneur</label>
+                                <select name="firas">
+                                    <option>Takoua Riahi</option>
+                                    <option>Houssem Ben Achour</option>
+                                    <option>Sabri Ben Marzouk</option>
+                                    <option>Amine Khemiri</option>
+                                    <option>Firas Matoussi </option>
+                                    <option>Walid Nsiri</option>
+
+                                </select>
+                                <input class="btn btn-danger" type="submit" value="Cherher">
+                            </form>
+
+
+
+
+
+                            <br>
+
+
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Libelle</th>
+                                    <th>Type</th>
+                                    <th>Salle</th>
+                                    <th>Nom du Coach</th>
+                                    <th>Date</th>
+                                    <th>Nombre de place</th>
+                                    <th>Partager dans les réseaux Sociaux</th></tr>
+
+
+
+                                </thead>
+                                <tbody>
+                                {% for cour in cours %}
+                                    <tr>
+                                        <td>{{ cour.lib }}</td>
+                                        <td>{{ cour.type }}</td>
+                                        <td>{{ cour.salle }}</td>
+                                        <td>{{ cour.coachName }}</td>
+                                        <td>{% if cour.date %}{{ cour.date|date('Y-m-d') }}{% endif %}</td>
+                                        <td>{{ cour.nbPlace }}</td>
+                                        <td>{{ socialButtons() }}</td></tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="colorlib-counter" class="colorlib-counters colorlib-degree-bg" style="background-image: url({{ asset('template/images/classes-4.jpg') }});" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="colorlib-trainers">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+                    <h2>Nos Entraîneurs</h2>
+                </div>
+            </div>
+            <div class="row animate-box">
+                <div class="owl-carousel">
+                    <div class="item">
+                        <div class="col-md-12 text-center">
+                            <div class="trainers-entry">
+                                <div class="trainer-img" style="background-image: url({{ asset('template/images/houssem.jpg') }})"></div>
+                                <div class="desc">
+                                    <h3>Houssem Ben Achour</h3>
+                                    <span>Musculation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-md-12 text-center">
+                            <div class="trainers-entry">
+                                <div class="trainer-img" style="background-image: url({{ asset('template/images/amine.jpg') }})"></div>
+                                <div class="desc">
+                                    <h3>Amine Khemiri</h3>
+                                    <span>Lutte Libre</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-md-12 text-center">
+                            <div class="trainers-entry">
+                                <div class="trainer-img" style="background-image: url({{ asset('template/images/takoua.jpg') }})"></div>
+                                <div class="desc">
+                                    <h3>Takwa iahi</h3>
+                                    <span>Aerobic sportive</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-md-12 text-center">
+                            <div class="trainers-entry">
+                                <div class="trainer-img" style="background-image: url({{ asset('template/images/elloza.jpg') }})"></div>
+                                <div class="desc">
+                                    <h3>Sabri Ben Marzouk</h3>
+                                    <span>Boxe</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-md-12 text-center">
+                            <div class="trainers-entry">
+                                <div class="trainer-img" style="background-image: url({{ asset('template/images/walid.jpg') }})"></div>
+                                <div class="desc">
+                                    <h3>Walid Nsiri</h3>
+                                    <span>Natation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

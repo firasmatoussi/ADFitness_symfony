@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Sponsor</h1>
+
+    <table border="2" width="100%">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ sponsor.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ sponsor.nom }}</td>
+            </tr>
+            <tr>
+                <th>Domaine</th>
+                <td>{{ sponsor.domaine }}</td>
+            </tr>
+            <tr>
+                <th>Contact</th>
+                <td>{{ sponsor.contact }}</td>
+            </tr>
+            <tr>
+                <th>Date_pacte</th>
+                <td>{{ sponsor.datepacte|date('Y-m-d') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sponsor_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('sponsor_edit', { 'id': sponsor.id }) }}">Edit sponsor</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

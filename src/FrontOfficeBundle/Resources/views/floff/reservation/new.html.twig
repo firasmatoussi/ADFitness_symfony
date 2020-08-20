@@ -1,0 +1,141 @@
+{% extends '@FrontOffice/AD-fitness/Cours.html.twig' %}
+
+{% block content %}
+    Reserver Pour ce Cours
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <div class="content mt-auto">
+        <div class="animated fadeIn">
+            <div class="row">
+
+
+                <div class="col-md-12">
+
+
+
+
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+
+                                {{ form_start(form) }}
+
+                                <tr>
+                                    <td style="text-align: center; color: #0b0b0b">Username</td>
+                                    <td>{{ form_widget(form.username) }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center; color: #0b0b0b">Email</td>
+                                    <td>{{ form_widget(form.email) }}</td>
+                                </tr>
+
+                                <center><input class="btn btn-danger" type="submit" value="Confirmer" /></center>
+
+
+                                        {{ form_end(form) }}
+                            </table>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="colorlib-counter" class="colorlib-counters colorlib-degree-bg" style="background-image: url({{ asset('template/images/cours.jpg') }});" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="colorlib-classes">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center animate-box">
+                    <div class="classes">
+                        <div class="classes-img" style="background-image: url({{ asset('template/images/classes-6.jpg') }});">
+                            <p class="price text-center"><span>120DT<br><small>/mois</small></span></p>
+                        </div>
+                        <div class="desc">
+                            <h3><a>Musculation</a></h3>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center animate-box">
+                    <div class="classes">
+                        <div class="classes-img" style="background-image: url({{ asset('template/images/classes-5.jpg') }});">
+                            <p class="price text-center"><span>100DT<br><small>/mois</small></span></p>
+                        </div>
+                        <div class="desc">
+                            <h3><a>Fitness</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center animate-box">
+                    <div class="classes">
+                        <div class="classes-img" style="background-image: url({{ asset('template/images/natation.jpg') }});">
+                            <p class="price text-center"><span>150DT<br><small>/mois</small></span></p>
+                        </div>
+                        <div class="desc">
+                            <h3><a>Natation</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center animate-box">
+                    <div class="classes">
+                        <div class="classes-img" style="background-image: url({{ asset('template/images/Boxe.jpg') }});">
+                            <p class="price text-center"><span>120DT<br><small>/mois</small></span></p>
+                        </div>
+                        <div class="desc">
+                            <h3><a>Boxe</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center animate-box">
+                    <div class="classes">
+                        <div class="classes-img" style="background-image: url({{ asset('template/images/classes-9.jpg') }});">
+                            <p class="price text-center"><span>120DT<br><small>/mois</small></span></p>
+                        </div>
+                        <div class="desc">
+                            <h3><a>Lutte Libre</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center animate-box">
+                    <div class="classes">
+                        <div class="classes-img" style="background-image: url({{ asset('template/images/classes-7.jpg') }});">
+                            <p class="price text-center"><span>90DT<br><small>/mois</small></span></p>
+                        </div>
+                        <div class="desc">
+                            <h3><a>Aerobic Sportive</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+
+
+
+{% endblock %}

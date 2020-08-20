@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+
+{% block content %}
+
+    <script>
+
+        function cnt() {
+
+            document.getElementById("#sb").addEventListener("click", function(event){
+                event.preventDefault()
+            });
+
+
+            alert("egegeg"); }
+
+    </script>
+
+    <h1>Assurance creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" id="sb" value="Create" onclick="cnt()" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('assurance_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

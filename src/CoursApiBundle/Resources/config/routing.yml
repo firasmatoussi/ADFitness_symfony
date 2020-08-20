@@ -1,0 +1,34 @@
+cours_api_homepage:
+    path:     /
+    defaults: { _controller: CoursApiBundle:Default:index }
+
+
+mobile_show:
+    path: /show_mobile
+    defaults: { _controller: CoursApiBundle:Default:show}
+
+add_cours_mobile:
+    path:   /cours/add/{lib}/{type}/{salle}/{coach}/{date}/{place}
+    defaults: { _controller: CoursApiBundle:Default:newCours }
+
+delete_cours_mobile:
+    path:   /cours/delete/{id}
+    defaults: { _controller: CoursApiBundle:Default:supprimerCours }
+
+update:
+    path:   /cours/update/{id}/{lib}/{type}/{salle}/{coach}/{date}/{place}
+    defaults: { _controller: CoursApiBundle:Default:modifierCours }
+
+add_reservation_mobile:
+    path:   /reservation/add/{id}/{lib}/{username}/{email}
+    defaults: { _controller: CoursApiBundle:Default:newReservation }
+
+
+mobile_show_Reserv:
+    path: /show_mobile_Reserv
+    defaults: { _controller: CoursApiBundle:Default:showReserv}
+
+
+
+
+

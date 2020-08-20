@@ -1,0 +1,216 @@
+
+front_office_homepage:
+    path:     /Home
+    defaults: { _controller: FrontOfficeBundle:Default:index }
+token:
+    path: /token
+    defaults: { _controller: FrontOfficeBundle:Default:getToken }
+
+home_cours:
+    path: /cours
+    defaults: { _controller: FrontOfficeBundle:Default:cours}
+
+home_evenements:
+    path: /event
+    defaults: { _controller: FrontOfficeBundle:Default:event}
+
+home_produits:
+    path: /produits
+    defaults: { _controller: FrontOfficeBundle:Default:produits}
+
+home_contact:
+    path: /contact
+    defaults: { _controller: FrontOfficeBundle:Default:contact}
+
+cours_index:
+    path:     /usercours
+    defaults: { _controller: "FrontOfficeBundle:Cours:index" }
+    methods:  GET
+
+cours_show:
+    path:     /{id}/showcours
+    defaults: { _controller: "FrontOfficeBundle:Cours:show" }
+    methods:  GET
+
+cours_new:
+    path:     /newcours
+    defaults: { _controller: "FrontOfficeBundle:Cours:new" }
+    methods:  [GET, POST]
+
+cours_edit:
+    path:     /{id}/editcours
+    defaults: { _controller: "FrontOfficeBundle:Cours:edit" }
+    methods:  [GET, POST]
+
+cours_delete:
+    path:     /{id}/deletecours
+    defaults: { _controller: "FrontOfficeBundle:Cours:delete" }
+    methods:  DELETE
+
+
+filtre_coach_user:
+    path: /coach_filtre_index
+    defaults: { _controller: "FrontOfficeBundle:Cours:findCoach"}
+
+filtre_type_user:
+    path: /type_filtre_index
+    defaults: { _controller: "FrontOfficeBundle:Cours:findType"}
+
+reservation_index_user:
+    path:     /showreservations
+    defaults: { _controller: "FrontOfficeBundle:Reservation:index" }
+    methods:  GET
+
+reservation_show_user:
+    path:     /{id}/showreservuser
+    defaults: { _controller: "FrontOfficeBundle:Reservation:show" }
+    methods:  GET
+
+reservation_new_user:
+    path:     /newreservuser/{id}
+    defaults: { _controller: "FrontOfficeBundle:Reservation:new" }
+    methods:  [GET, POST]
+
+reservation_edit_user:
+    path:     /{id}/editreservuser
+    defaults: { _controller: "FrontOfficeBundle:Reservation:edit" }
+    methods:  [GET, POST]
+
+reservation_delete_user:
+    path:     /{id}/deletereservuser
+    defaults: { _controller: "FrontOfficeBundle:Reservation:delete" }
+    methods:  DELETE
+
+
+notification:
+    path: /notif
+    defaults: { _controller: "FrontOfficeBundle:Notification:display"}
+
+event_index:
+    path:     /ev
+    defaults: { _controller: FrontOfficeBundle:Events:index}
+    methods:  GET
+
+event_show:
+    path:     /{id}/sh
+    defaults: { _controller: "FrontOfficeBundle:Events:show" }
+    methods:  GET
+
+event_new:
+    path:     /ne
+    defaults: { _controller: "FrontOfficeBundle:Events:new" }
+    methods:  [GET, POST]
+
+reservat_index:
+    path:     /indres
+    defaults: { _controller: "FrontOfficeBundle:Reservations:index" }
+    methods:  GET
+
+reservat_show:
+    path:     /{idr}/showw
+    defaults: { _controller: "FrontOfficeBundle:Reservations:show" }
+    methods:    GET
+
+reservat_new:
+    path:     /neww/{id}
+    defaults: { _controller: "FrontOfficeBundle:Reservations:new" }
+    methods:  [GET, POST]
+
+reservat_delete:
+    path:     /{idr}/deletee
+    defaults: { _controller: "FrontOfficeBundle:Reservations:delete" }
+    methods:  DELETE
+
+reservat_edit:
+    path:     /{idr}/editt
+    defaults: { _controller: "FrontOfficeBundle:Reservations:edit" }
+    methods:  [GET, POST]
+
+
+event_edit:
+    path:     /{id}/ed
+    defaults: { _controller: "FrontOfficeBundle:Events:edit" }
+    methods:  [GET, POST]
+
+event_delete:
+    path:     /{id}/de
+    defaults: { _controller: "FrontOfficeBundle:Events:delete" }
+    methods:  DELETE
+
+reservations:
+    path:     /reservation/
+    defaults: { _controller: "FrontOfficeBundle:Reservations:affichage" }
+
+
+trainer_index:
+    path:     /t
+    defaults: { _controller: FrontOfficeBundle:Default:indexy }
+
+eventres_index:
+    path:     /k
+    defaults: { _controller: FrontOfficeBundle:Default:indexx }
+
+List_Product:
+    path: /ProduitsList
+    defaults: { _controller: FrontOfficeBundle:Default:ProductList}
+
+Cart:
+    path: /Cartview
+    defaults: { _controller: FrontOfficeBundle:Default:Cart}
+
+quick:
+    path: /{id}/QuickView
+    defaults: { _controller: FrontOfficeBundle:Default:quick}
+
+feed:
+    path: /{id}/feeds
+    defaults: { _controller: FrontOfficeBundle:Default:feed}
+
+likes_route:
+    path: /{id}/like
+    defaults: { _controller: FrontOfficeBundle:Default:like}
+
+likesa_route:
+    path: /{idp}/{idu}/likea
+    defaults: { _controller: FrontOfficeBundle:Default:likea}
+
+addtocart_route:
+    path: /{id}/addtocart
+    defaults: { _controller: FrontOfficeBundle:Panier:Addtocart}
+
+deletefromcart_route:
+    path: /{id}/deletefromcart
+    defaults: { _controller: FrontOfficeBundle:Panier:deletefromcart}
+
+Payement:
+    path: /Payement
+    defaults: { _controller: FrontOfficeBundle:Default:Paymnt}
+
+ShowProductsM:
+    path: /ShowProdsM
+    defaults: { _controller: FrontOfficeBundle:Default:ShowProductM}
+
+AddProductsM:
+    path: /{name}/{price}/{quantity}/{fabricationDate}/{expirationDate}/{amount}/{cathegory}/{storeid}/{image}/{description}/{solde}/AddProdsM
+    defaults: { _controller: FrontOfficeBundle:Default:AddProductM}
+
+DeleteProductsM:
+    path: /{id}/DeleteProdsM
+    defaults: { _controller: FrontOfficeBundle:Default:DeleteProductM}
+
+UpdateProductsM:
+    path: /{id}/{name}/{price}/{quantity}/{fabricationDate}/{expirationDate}/{amount}/{cathegory}/{storeid}/{image}/{description}/{solde}/UpdateProdsM
+    defaults: { _controller: FrontOfficeBundle:Default:UpdateProductM}
+
+panierProducts:
+    path: /showPanier
+    defaults: { _controller: FrontOfficeBundle:Panier:getSessionPanier}
+
+feedMobile:
+    path: /{idp}/{idu}/{rating}/{feedback}/DeleteProdsM
+    defaults: { _controller: FrontOfficeBundle:Default:DeleteProductM}
+
+Sessionaa:
+    path: /SessionDE
+    defaults: { _controller: FrontOfficeBundle:Panier:SessionDE}
+

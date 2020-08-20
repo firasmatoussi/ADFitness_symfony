@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Ajout equipement</h1>
+
+
+
+    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+        {{ form_start(form) }}
+        <tr>
+            <td>{{ form_label(form.reference)}}</td>
+            <td>
+                {{ form_widget(form.reference) }}
+            </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.libelle)}}</td>
+            <td>
+                {{ form_widget(form.libelle) }}
+            </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.domaine)}}</td>
+            <td>
+                {{ form_widget(form.domaine) }}
+            </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.salle)}}</td>
+            <td>
+                {{ form_widget(form.salle) }}
+            </td>
+        </tr>
+
+        <tr>
+            <td>{{ form_label(form.etat)}}</td>
+            <td>
+                {{ form_widget(form.etat) }}
+            </td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.fournisseur)}}</td>
+            <td>
+                 {{ form_widget(form.fournisseur) }}
+            </td>
+        </tr>
+        <tr>
+            <td><div style="display:none">
+                    {{ form_label(form.date) }}
+                </div>
+            </td>
+            <td>
+                <div style="display:none">
+                    {{ form_row(form.date) }}
+                </div>
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                <input class="btn btn-primary" type="submit" value="Ajouter">
+                <a class="btn btn-warning" href="{{ path('equipements_index') }}">Retour</a>
+            </td>
+        </tr>
+        {{ form_end(form) }}
+    </table>
+
+
+{% endblock %}

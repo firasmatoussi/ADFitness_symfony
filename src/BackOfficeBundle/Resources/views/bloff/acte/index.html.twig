@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Assurances list</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Assurance</strong>
+                        </div>
+                        <div class="card-body">
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+    <table style="width:100%;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idsp</th>
+                <th>Nomsp</th>
+                <th>Date</th>
+                <th>Montant</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for acte in actes %}
+            <tr>
+                <td><a  href="{{ path('acte_show', { 'id': acte.id }) }}">{{ acte.id }}</a></td>
+                <td>{{ acte.idsp }}</td>
+                <td>{{ acte.nomsp }}</td>
+                <td>{% if acte.date %}{{ acte.date|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ acte.montant }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a class="btn btn-primary" role="button" class="btn btn-primary" role="button"  href="{{ path('acte_show', { 'id': acte.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-warning" role="button" href="{{ path('acte_edit', { 'id': acte.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+
+                </ul>
+            </div>
+        </div><!-- .animated -->
+    </div><!-- .content -->
+
+{% endblock %}

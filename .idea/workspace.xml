@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5670ad72-a2aa-422f-a87c-229a581e8b72" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" executionDataType="PHAR" phpInterpreterId="bfd26657-2a99-4306-b37b-28b6c97c77ad" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <pharPath>$PROJECT_DIR$/composer.phar</pharPath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Controller/EventsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="97" column="57" selection-start-line="97" selection-start-column="57" selection-end-line="97" selection-end-column="57" />
+              <folding>
+                <element signature="e#1468#1489#0#PHP" expanded="true" />
+                <element signature="e#2837#2857#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/even/sho.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+              <folding>
+                <element signature="e#12#56#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/even/inde.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="60" />
+              <folding>
+                <element signature="e#12#56#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Entity/Events.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/Evenements.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#12#47#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/Default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/Default/Home.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="164" column="61" selection-start-line="164" selection-start-column="61" selection-end-line="164" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/Default/show.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Entity/Reservations.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="605">
+              <caret line="130" selection-start-line="130" selection-end-line="130" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>equipe</find>
+      <find>eve</find>
+      <find>rec</find>
+      <find>mag</find>
+      <find>newe</find>
+      <find>neweq</find>
+      <find>Home</find>
+      <find>yoga m</find>
+      <find>showrese</find>
+      <find>showreser</find>
+      <find>entityM</find>
+      <find>fra</find>
+      <find>reservation_delete</find>
+      <find>equi</find>
+      <find>equipements</find>
+      <find>fourn</find>
+      <find>sta</find>
+      <find>front</find>
+      <find>GET</find>
+      <find>getId()</find>
+      <find>utili</find>
+      <find>assurance</find>
+      <find>rese</find>
+      <find>inde</find>
+      <find>class</find>
+      <find>sponsor</find>
+      <find>getrepo</find>
+      <find>repo</find>
+      <find>/cours</find>
+      <find>newreservuser</find>
+    </findStrings>
+  </component>
+  <component name="FrameworkCommandLineHistory">
+    <commandsHistory>
+      <command text="s doctrine:schema:update" />
+      <command text="php bin/console doctrine:schema:update --force" />
+      <command text="s doctrine:mapping:import --force BackOfficeBundle annotation" />
+      <command text="s doctrine:schema:update --force" />
+      <command text="c dump-autoload" />
+      <command text="c composer update " />
+      <command text="composer update " />
+      <command text="s doctrine:schema:update --force" />
+      <command text="s doctrine:generate:crud UserBundle:User" />
+      <command text="s doctrine:generate:crud " />
+      <command text="s router:match user_user" />
+      <command text="s router:match /user" />
+      <command text="s doctrine:generate:crud UserBundle:User" />
+      <command text="s doctrine:generate:crud UserBundle:User --overwrite" />
+      <command text="s doctrine:schema:update --force" />
+      <command text="s doctrine:generate:form BackOfficeBundle:Events" />
+      <command text="s doctrine:schema:update --force" />
+      <command text="s doctrine:mapping:import --force BackOfficeBundle annotation" />
+      <command text="s doctrine:generate:form BackOfficeBundle:Events" />
+      <command text="s doctrine:mapping:import --force FrontOfficeBundle annotation" />
+      <command text="s doctrine:mapping:import --force BackOfficeBundle annotation" />
+      <command text="s doctrine:generate:entity " />
+      <command text="s doctrine:mapping:import --force FrontofficeBundle annotation" />
+      <command text="s doctrine:mapping:import --force FrontOfficeBundle annotation" />
+      <command text="composer require gedmo/doctrine-extensions" />
+    </commandsHistory>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Controller/ReservationController.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/bloff/reservation/reserv_index.html.twig" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/assurance.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Sponsor.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Acte.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Repository/assuranceRepository.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Controller/assuranceController.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Repository/AssuranceRepository.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Assurance.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/CartTable.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Cours.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Equipements.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Events.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Feedbacka.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/FosUser.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Fournisseurs.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Notification.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Postlikea.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/RecHistorique.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Reclamation.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Users.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Controller/sponsorController.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/BackOfficeViews/AdminHome.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Entity/Cours.php" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Entity/Reservation.php" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/floff/reservation/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Controller/PanierController.php" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/ProductMagasin.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Postlike.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/PostLike.php" />
+        <option value="$PROJECT_DIR$/src/BackOfficeBundle/Entity/Feedback.php" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/Produits.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/ProduitsList.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/quickview.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/feeds.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/Cart.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Controller/CoursController.php" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Controller/ReservationController.php" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/Default/Home.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Entity/Reservations.php" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Controller/EventsController.php" />
+        <option value="$PROJECT_DIR$/src/FrontOfficeBundle/Entity/Events.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/even/sho.html.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nomaya/social-bundle" />
+      <path value="$PROJECT_DIR$/vendor/ideato/star-rating-bundle" />
+      <path value="$PROJECT_DIR$/vendor/mrad/notifications-bundle" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
+      <path value="$PROJECT_DIR$/vendor/cmen/google-charts-bundle" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
+      <path value="$PROJECT_DIR$/vendor/flosch/stripe-bundle" />
+      <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="even" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontOfficeBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontOfficeBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontOfficeBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontOfficeBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontOfficeBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PIVersionuneFiras" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PIVersionuneFiras" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontOfficeBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="AD-fitness" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\PIVersionuneFiras\src\BackOfficeBundle\Entity" />
+      <recent name="C:\Users\Firas\Desktop\4INFOB1\ReservePI\versionune\PIVersionuneFiras\src\BackOfficeBundle\Repository" />
+      <recent name="C:\Users\Firas\Desktop\versionune\PIVersionuneFiras\src\BackOfficeBundle\Tests\Controller" />
+      <recent name="C:\Users\Firas\Desktop\versionune\PIVersionuneFiras\src\BackOfficeBundle" />
+      <recent name="C:\Users\Firas\Desktop\versionune\PIVersionuneFiras\src\BackOfficeBundle\Form" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Firas\Desktop\versionune\PIVersionunlass\vendor\ideato\star-rating-bundle\Ideato\StarRatingBundle\Service" />
+      <recent name="C:\Users\Firas\Desktop\versionune\PIVersionunlass\vendor\ideato\star-rating-bundle\Ideato\StarRatingBundle\Entity" />
+      <recent name="C:\Users\Firas\Desktop\versionune\PIVersionunlass\src\FrontOfficeBundle\Resources\views\floff" />
+      <recent name="C:\wamp64\www\Projects\PIVersionune\src\BackOfficeBundle\Resources\views\bloff" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5670ad72-a2aa-422f-a87c-229a581e8b72" name="Default Changelist" comment="" />
+      <created>1542021261410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542021261410</updated>
+      <workItem from="1542021803440" duration="1326000" />
+      <workItem from="1542309491925" duration="25778000" />
+      <workItem from="1542357750255" duration="5156000" />
+      <workItem from="1543163354566" duration="16691000" />
+      <workItem from="1543189908279" duration="13859000" />
+      <workItem from="1543254514397" duration="17142000" />
+      <workItem from="1543317681339" duration="9382000" />
+      <workItem from="1543354402779" duration="14637000" />
+      <workItem from="1543423575797" duration="17724000" />
+      <workItem from="1543519967479" duration="5561000" />
+      <workItem from="1543771890985" duration="33208000" />
+      <workItem from="1543924827088" duration="9898000" />
+      <workItem from="1543943485679" duration="24582000" />
+      <workItem from="1543973633623" duration="11820000" />
+      <workItem from="1543987728423" duration="2325000" />
+      <workItem from="1543999531149" duration="852000" />
+      <workItem from="1544001876356" duration="5352000" />
+      <workItem from="1544008389797" duration="1067000" />
+      <workItem from="1544011248635" duration="5081000" />
+      <workItem from="1544024719635" duration="340000" />
+      <workItem from="1547834483376" duration="3952000" />
+      <workItem from="1547846585587" duration="7451000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="233184000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1337953" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49848714" weight="0.17704917" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="12" sideWeight="0.49924356" weight="0.45720476" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Entity/Sponsor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1428">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Controller/ActeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="e#508#548#0#PHP" expanded="true" />
+            <element signature="e#757#780#1#PHP" expanded="true" />
+            <element signature="e#841#881#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Controller/sponsorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+          <folding>
+            <element signature="e#47#83#0#PHP" expanded="true" />
+            <element signature="e#842#868#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Controller/assuranceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="e#47#85#0#PHP" expanded="true" />
+            <element signature="e#521#549#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/BackOfficeViews/AdminHome.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2079">
+          <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2106">
+          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Entity/Cours.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4806">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Entity/Reservation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2943">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/floff/cours/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/floff/reservation/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Controller/PanierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3795">
+          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/Login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#12#47#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/Contact.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-822">
+          <folding>
+            <element signature="e#12#47#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Entity/ProductMagasin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="365" column="1" selection-start-line="365" selection-start-column="1" selection-end-line="365" selection-end-column="1" />
+          <folding>
+            <element signature="e#43#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Entity/PostLike.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Entity/Feedback.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/Produits.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="401" column="9" selection-start-line="401" selection-start-column="9" selection-end-line="401" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/ProduitsList.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="251" column="8" selection-start-line="251" selection-start-column="8" selection-end-line="251" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/quickview.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="290" column="14" selection-start-line="290" selection-start-column="14" selection-end-line="290" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/feeds.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="e#12#54#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/Cart.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="204" column="9" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
+          <folding>
+            <element signature="e#60#908#0#Twig" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/floff/cours/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#12#51#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/Cours.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="36" />
+          <folding>
+            <element signature="e#12#47#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Controller/CoursController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="302" selection-start-line="302" selection-end-line="302" />
+          <folding>
+            <element signature="e#49#92#0#PHP" expanded="true" />
+            <element signature="e#515#557#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/resetting.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/security.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/profile.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/group.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/change_password.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/registration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="258" column="36" selection-start-line="258" selection-start-column="36" selection-end-line="258" selection-end-column="36" />
+          <folding>
+            <element signature="e#299#348#0#PHP" expanded="true" />
+            <element signature="e#3742#3784#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/ChangePasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Controller/ReservationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="31" selection-start-line="4" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/Default/trainer.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/Default/showevent.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="189" selection-end-column="64" />
+          <folding>
+            <element signature="e#48#85#0#PHP" expanded="true" />
+            <element signature="e#6294#6337#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/Default/Home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="164" column="61" selection-start-line="164" selection-start-column="61" selection-end-line="164" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/AD-fitness/Evenements.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#12#47#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Entity/Reservations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Resources/views/Default/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Controller/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="97" column="57" selection-start-line="97" selection-start-column="57" selection-end-line="97" selection-end-column="57" />
+          <folding>
+            <element signature="e#1468#1489#0#PHP" expanded="true" />
+            <element signature="e#2837#2857#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontOfficeBundle/Entity/Events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/even/inde.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="60" />
+          <folding>
+            <element signature="e#12#56#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/even/sho.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding>
+            <element signature="e#12#56#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

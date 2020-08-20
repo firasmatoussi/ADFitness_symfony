@@ -1,0 +1,45 @@
+
+
+{% block content %}
+    <h1>Reservations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idr</th>
+                <th>Eve</th>
+                <th>Fullname</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reservation in reservations %}
+            <tr>
+
+                <td>{{ reservation.eve }}</td>
+                <td>{{ reservation.fullname }}</td>
+                <td>{{ reservation.email }}</td>
+                <td>{{ reservation.phone }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('reservat_show', { 'idr': reservation.idr }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('reservat_edit', { 'idr': reservation.idr }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reservat_new') }}">Create a new reservation</a>
+        </li>
+    </ul>
+{% endblock %}

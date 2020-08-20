@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Reclamation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reclamation.id }}</td>
+            </tr>
+            <tr>
+                <th>Lib</th>
+                <td>{{ reclamation.lib }}</td>
+            </tr>
+            <tr>
+                <th>Exp</th>
+                <td>{{ reclamation.exp }}</td>
+            </tr>
+            <tr>
+                <th>Dat</th>
+                <td>{% if reclamation.dat %}{{ reclamation.dat|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tex</th>
+                <td>{{ reclamation.tex }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{% if reclamation.etat %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Reponse</th>
+                <td>{{ reclamation.reponse }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reclamation_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('reclamation_edit', { 'id': reclamation.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

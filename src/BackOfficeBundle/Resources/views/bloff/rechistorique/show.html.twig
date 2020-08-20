@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Rechistorique</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ recHistorique.id }}</td>
+            </tr>
+            <tr>
+                <th>Lib</th>
+                <td>{{ recHistorique.lib }}</td>
+            </tr>
+            <tr>
+                <th>Exp</th>
+                <td>{{ recHistorique.exp }}</td>
+            </tr>
+            <tr>
+                <th>Dat</th>
+                <td>{% if recHistorique.dat %}{{ recHistorique.dat|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Tex</th>
+                <td>{{ recHistorique.tex }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{% if recHistorique.etat %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Reponse</th>
+                <td>{{ recHistorique.reponse }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('rechistorique_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('rechistorique_edit', { 'id': recHistorique.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

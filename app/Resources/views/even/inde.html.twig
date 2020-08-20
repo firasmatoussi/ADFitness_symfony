@@ -1,0 +1,62 @@
+{% extends '@FrontOffice/AD-fitness/Evenements.html.twig' %}
+
+
+{% block content %}
+    <h1>Events list</h1>
+
+    <table>
+        <thead>
+            <tr>
+
+                <th>Titre</th>
+                <th>Lieu</th>
+                <th>Nbp</th>
+                <th>Coach</th>
+                <th>Date</th>
+                <th>Descp</th>
+                <th>Reservation</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            <tr>
+
+                <td>{{ event.titre }}</td>
+                <td>{{ event.lieu }}</td>
+                <td>{{ event.nbP }}</td>
+                <td>{{ event.coach }}</td>
+                <td>{{ event.date }}</td>
+                <td>{{ event.descp }}</td>
+                {% if event.nbP > 0 %}
+                    <td><a href="{{ path('reservat_new', { 'id': event.id }) }}">Reserver</a></td>
+                {% else  %}
+                    <td>Complet</td>
+                {% endif %}
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('event_show', { 'id': event.id }) }}">show</a>
+                        </li>
+                        <li>
+                            {{ socialButtons() }}
+                        </li>
+                      {#
+                        <li>
+                            <a href="{{ path('reservat_new', { 'id': event.id }) }}">Réserver pour cet évènement</a>
+                        </li>#}
+                       {# <li>
+                            <a href="{{ path('reservat_new') }}">Réserver pour cet évènement</a>
+                        </li>#}
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+
+
+{% endblock %}

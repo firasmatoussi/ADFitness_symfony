@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Fiches list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idclient</th>
+                <th>Naissance</th>
+                <th>Diabete</th>
+                <th>Hypo</th>
+                <th>Hyper</th>
+                <th>Perte</th>
+                <th>Saignement</th>
+                <th>Fumeur</th>
+                <th>Pratiquant</th>
+                <th>Perdre</th>
+                <th>Strength</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fiche in fiches %}
+            <tr>
+                <td><a href="{{ path('fiche_show', { 'id': fiche.id }) }}">{{ fiche.id }}</a></td>
+                <td>{{ fiche.idclient }}</td>
+                <td>{% if fiche.naissance %}{{ fiche.naissance|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if fiche.diabete %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fiche.hypo %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fiche.hyper %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fiche.perte %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fiche.saignement %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fiche.fumeur %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fiche.pratiquant %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fiche.perdre %}Yes{% else %}No{% endif %}</td>
+                <td>{% if fiche.strength %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('fiche_show', { 'id': fiche.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('fiche_edit', { 'id': fiche.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('fiche_new') }}">Create a new fiche</a>
+        </li>
+    </ul>
+{% endblock %}

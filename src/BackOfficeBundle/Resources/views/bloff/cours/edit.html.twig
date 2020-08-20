@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Gestion de cours</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+        {{ form_start(edit_form) }}
+        <tr>
+            <td>
+                Libelle
+            </td>
+            <td>
+                    {{ form_widget(edit_form.lib) }}
+
+            </td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>
+                {{ form_widget(edit_form.type) }}
+            </td>
+        </tr>
+        <tr>
+            <td>Salle</td>
+            <td>
+                {{ form_widget(edit_form.salle) }}
+            </td>
+        </tr>
+        <tr>
+            <td>Nom du coach</td>
+            <td>
+                {{ form_widget(edit_form.coachName) }}
+            </td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td>
+                {{ form_widget(edit_form.date) }}
+            </td>
+        </tr>
+        <tr>
+            <td>Nombre de place</td>
+            <td>
+                {{ form_widget(edit_form.nbPlace) }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <input class="btn btn-danger" type="submit" value="Modifier">
+            </td>
+        </tr>
+        {{ form_end(edit_form) }}
+    </table>
+    <a class="btn btn-primary" role="button" href="{{ path('cours_index_admin') }}">Retourner à la liste des cours</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+
+
+{% block content %}
+    <h1>Reservations</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Idr</th>
+            <td>{{ reservations.idr }}</td>
+        </tr>
+        <tr>
+            <th>Eve</th>
+            <td>{{ reservations.eve }}</td>
+        </tr>
+        <tr>
+            <th>Fullname</th>
+            <td>{{ reservations.fullname }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ reservations.email }}</td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td>{{ reservations.phone }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reservat_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('reservat_edit', { 'idr': reservations.idr }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

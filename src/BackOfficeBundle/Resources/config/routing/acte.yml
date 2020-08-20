@@ -1,0 +1,24 @@
+acte_index:
+    path:     /
+    defaults: { _controller: "BackOfficeBundle:Acte:index" }
+    methods:  GET
+
+acte_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackOfficeBundle:Acte:show" }
+    methods:  GET
+
+acte_new:
+    path:     /new
+    defaults: { _controller: "BackOfficeBundle:Acte:new" }
+    methods:  [GET, POST]
+
+acte_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackOfficeBundle:Acte:edit" }
+    methods:  [GET, POST]
+
+acte_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackOfficeBundle:Acte:delete" }
+    methods:  DELETE

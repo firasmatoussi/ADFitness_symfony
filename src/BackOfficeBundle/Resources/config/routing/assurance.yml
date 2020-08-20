@@ -1,0 +1,24 @@
+assurance_index:
+    path:     /
+    defaults: { _controller: "BackOfficeBundle:assurance:index" }
+    methods:  GET
+
+assurance_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackOfficeBundle:assurance:show" }
+    methods:  GET
+
+assurance_new:
+    path:     /new
+    defaults: { _controller: "BackOfficeBundle:assurance:new" }
+    methods:  [GET, POST]
+
+assurance_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackOfficeBundle:assurance:edit" }
+    methods:  [GET, POST]
+
+assurance_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackOfficeBundle:assurance:delete" }
+    methods:  DELETE

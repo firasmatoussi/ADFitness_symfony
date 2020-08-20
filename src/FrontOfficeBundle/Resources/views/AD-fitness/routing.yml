@@ -1,0 +1,54 @@
+front_office_homepage:
+    path:     /Home
+    defaults: { _controller: FrontOfficeBundle:Default:index }
+token:
+    path: /token
+    defaults: { _controller: FrontOfficeBundle:Default:getToken }
+home_cours:
+    path: /cours
+    defaults: { _controller: FrontOfficeBundle:Default:cours}
+
+home_evenements:
+    path: /event
+    defaults: { _controller: FrontOfficeBundle:Default:event}
+
+home_produits:
+    path: /produits
+    defaults: { _controller: FrontOfficeBundle:Default:produits}
+
+home_contact:
+    path: /contact
+    defaults: { _controller: FrontOfficeBundle:Default:contact}
+
+List_Product:
+    path: /ProduitsList
+    defaults: { _controller: FrontOfficeBundle:Default:ProductList}
+
+Cart:
+    path: /Cartview
+    defaults: { _controller: FrontOfficeBundle:Default:Cart}
+
+quick:
+    path: /{id}/QuickView
+    defaults: { _controller: FrontOfficeBundle:Default:quick}
+
+feed:
+    path: /{id}/feeds
+    defaults: { _controller: FrontOfficeBundle:Default:feed}
+
+likes_route:
+    path: /{id}/like
+    defaults: { _controller: FrontOfficeBundle:Default:like}
+
+addtocart_route:
+    path: /{id}/addtocart
+    defaults: { _controller: FrontOfficeBundle:Panier:Addtocart}
+
+deletefromcart_route:
+    path: /{id}/deletefromcart
+    defaults: { _controller: FrontOfficeBundle:Panier:deletefromcart}
+
+Payement:
+    path: /Payement
+    defaults: { _controller: FrontOfficeBundle:Default:Paymnt}
+
